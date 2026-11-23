@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased selection:bg-[#FFD400] selection:text-ink">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNO Design Studio — Brand & UI/UX Design Studio in Finland</title>
+  <meta name="description" content="A small brand and UI/UX design studio in Kangasala, Finland. Identities, websites and apps for companies in Europe and East Asia." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        borderRadius: { none: '0px', DEFAULT: '0px', sm: '0px', md: '0px', lg: '0px', full: '9999px' },
+        extend: {
+          colors: { poster: '#E5E5E5', ink: '#111111', vermilion: '#FFD400', alloyLight: '#DCDCDC', oled: '#161616', muted: '#595959' },
+          fontFamily: {
+            sans: ['"Switzer"', 'Arial', 'sans-serif'],
+            mono: ['"Switzer"', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            'micro': ['0.6875rem', { lineHeight: '1.35', letterSpacing: '0.04em' }],
+            'nano': ['0.625rem', { lineHeight: '1.3', letterSpacing: '0.08em' }],
+            'poster-num': ['clamp(5rem, 11.5vw, 10.5rem)', { lineHeight: '0.82', letterSpacing: '0' }],
+            'poster-sub': ['clamp(0.9rem, 1.35vw, 1.25rem)', { lineHeight: '1.1', letterSpacing: '0' }],
+          },
+          transitionTimingFunction: { 'swiss': 'cubic-bezier(0.16, 1, 0.3, 1)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* VOICE: calm, plain, confident — a small Finnish studio talking to clients
+       IDEA: a Swiss exhibition poster for the studio
+       PICTURE: monumental numerals 20 / 05 framing the headline
+       COLOUR and TYPE: poster grey, ink, one vermilion accent; Switzer only
+       LAYOUT: poster hero, then numbered index sections, dark manifesto footer */
+    body { background: #E5E5E5; color: #111111; overflow-x: hidden; }
+    .grid-on { background-image: linear-gradient(to right, rgba(17,17,17,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,17,17,.06) 1px, transparent 1px); background-size: 6.25% 90px; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    .no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
+    :focus-visible { outline: 2px solid #111111; outline-offset: 2px; box-shadow: 0 0 0 4px #FFD400; }
+    html { scroll-padding-top: 72px; }
+      
+    /* ARROWS: thin line arrows drawn as masks, so they take the text colour */
+    .arr { display:inline-block; width:.95em; height:.95em; vertical-align:-0.12em; margin-left:.2em; overflow:hidden; -webkit-text-fill-color:transparent; color:inherit; background-color:currentColor; -webkit-mask:var(--a) center/contain no-repeat; mask:var(--a) center/contain no-repeat; user-select:none; }
+    .arr-ne { --a:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10'%3E%3Cpath d='M2 22L21.2 2.8M9 2.8h12.2V15'/%3E%3C/svg%3E"); }
+    .arr-e { --a:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10'%3E%3Cpath d='M2 12h19.2M14 4.8l7.2 7.2-7.2 7.2'/%3E%3C/svg%3E"); }
+    .arr-w { --a:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10'%3E%3Cpath d='M22 12H2.8M10 4.8L2.8 12l7.2 7.2'/%3E%3C/svg%3E"); }
+</style>
+</head>
+
+<body id="app-body" class="font-sans bg-poster text-ink relative grid-on">
+
+  <!-- ============ NAV ============ -->
+  <nav class="sticky top-0 z-40 bg-ink text-[#F4F4F1] w-full border-b border-ink">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-3 flex flex-wrap items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-3 min-h-[44px]" aria-label="INNO Design Studio — home">
+      <svg viewBox="48 281 481 40" class="h-[17px] sm:h-[20px] w-auto text-[#F4F4F1]" fill="currentColor" aria-hidden="true"><g> <g> <path d="M203.317,285.339h12.082c8.795,0,14.125,5.685,14.125,15.901c0,10.217-5.241,15.857-14.036,15.857h-12.171V285.339z M215.177,312.879c7.374,0,9.284-5.509,9.284-11.639c0-6.129-1.91-11.682-9.284-11.682h-6.973v23.321H215.177z"></path> <path d="M234.362,285.339h22.476v4.219h-17.589v9.017h15.413v4.221h-15.413v10.083h18.034v4.219h-22.92V285.339z"></path> <path d="M259.768,306.393h5.063c0.355,4.265,2.887,7.152,8.839,7.152c5.108,0,6.663-2.221,6.663-5.11 c0-4.04-3.109-4.616-8.883-6.084c-4.975-1.332-10.438-2.932-10.438-8.972c0-5.508,4.263-8.662,11.104-8.662 c7.24,0,11.948,3.687,12.437,10.083h-5.063c-0.533-3.82-2.71-5.907-7.33-5.907c-3.997,0-6.041,1.466-6.041,4.22 c0,3.553,3.332,4.308,7.418,5.33c6.129,1.555,11.904,3.021,11.904,9.728c0,5.464-3.687,9.549-11.637,9.549 C265.764,317.719,260.123,313.545,259.768,306.393z"></path> <path d="M289.924,285.339h4.886v31.759h-4.886V285.339z"></path> <path d="M299.606,301.196c0-9.549,5.819-16.479,14.88-16.479c8.217,0,12.57,4.397,13.592,10.438h-5.107 c-0.844-3.997-3.82-6.219-8.528-6.219c-7.019,0-9.728,6.308-9.728,12.26c0,5.997,2.043,12.303,9.461,12.303 c5.242,0,9.416-3.643,9.461-8.926h-9.372v-4.088h14.347v16.612h-3.376l-1.198-4.397h-0.089c-2.222,3.244-5.198,5.019-10.04,5.019 C304.76,317.719,299.606,310.79,299.606,301.196z"></path> <path d="M333.851,285.339h5.597l14.746,24.431h0.09v-24.431h4.93v31.759h-5.596l-14.791-24.43h-0.09v24.43h-4.886V285.339z"></path> <path d="M372.846,306.57h3.376c0.444,4.931,3.465,8.262,10.083,8.262c5.863,0,7.862-2.799,7.862-6.307 c0.044-4.707-3.243-5.508-9.772-6.975c-5.197-1.199-10.216-2.797-10.216-8.617c0-5.063,4.042-8.173,10.571-8.173 c6.885,0,11.238,3.509,11.727,9.728h-3.376c-0.533-4.397-2.976-6.886-8.351-6.886c-4.664,0-7.195,1.911-7.195,5.198 c0,4.264,3.775,5.152,8.439,6.174c6.529,1.421,11.548,3.02,11.548,9.459c0,5.154-3.553,9.24-11.104,9.24 C378.798,317.675,373.29,313.722,372.846,306.57z"></path> <path d="M408.956,288.182h-10.794v-2.843h24.829v2.843h-10.837v28.916h-3.198V288.182z"></path> <path d="M426.765,306.393v-21.054h3.243v21.054c0,5.687,2.843,8.439,8.706,8.439c5.862,0,8.706-2.753,8.706-8.439v-21.054h3.242 v21.054c0,6.751-3.643,11.282-11.948,11.282S426.765,313.144,426.765,306.393z"></path> <path d="M457.189,285.339h11.504c8.884,0,13.814,6.13,13.814,15.947c0,9.815-5.063,15.812-13.947,15.812h-11.371V285.339z M468.561,314.254c7.95,0,10.571-5.95,10.571-12.968c0-7.063-2.487-13.104-10.482-13.104h-8.219v26.072H468.561z"></path> <path d="M487.702,285.339h3.242v31.759h-3.242V285.339z"></path> <path d="M496.097,301.196c0-9.549,6.084-16.435,15.278-16.435c9.15,0,15.235,6.886,15.235,16.435 c0,9.549-6.085,16.479-15.235,16.479C502.181,317.675,496.097,310.745,496.097,301.196z M511.375,314.832 c7.818,0,11.86-6.129,11.86-13.636c0-7.507-4.042-13.593-11.86-13.593c-7.862,0-11.904,6.085-11.904,13.593 C499.471,308.703,503.513,314.832,511.375,314.832z"></path> </g> <g> <path d="M183.415,284.438c-5.8,0-10.519,4.72-10.519,10.522c0,5.799,4.719,10.516,10.519,10.516c5.801,0,10.52-4.717,10.52-10.516 C193.935,289.158,189.216,284.438,183.415,284.438z M183.415,303.368c-4.637,0-8.41-3.771-8.41-8.408 c0-4.64,3.773-8.415,8.41-8.415c4.639,0,8.413,3.775,8.413,8.415C191.828,299.597,188.054,303.368,183.415,303.368z"></path> <path d="M188.253,299.433c-0.089-1.39-0.22-3.424-1.724-4.067c1.14-0.468,1.85-1.56,1.85-2.907c0-2.31-1.489-3.582-4.194-3.582 h-5.104v12.174h2.17v-4.63h2.867c1.863,0,1.908,1.883,1.94,3.257c0.016,0.68,0.026,1.128,0.238,1.326l0.05,0.047h2.197 l0.007-0.417l-0.124-0.038C188.323,300.516,188.283,299.89,188.253,299.433z M181.251,290.799h2.569 c1.64,0,2.371,0.553,2.371,1.791c0,1.578-1.307,1.909-2.404,1.909h-2.536V290.799z"></path> </g> <g> <polygon points="69.486,307.435 69.486,284.778 62.334,284.778 62.334,317.805 71.524,317.805 86.537,293.908 86.537,317.805 93.688,317.805 93.688,284.778 83.715,284.778 "></polygon> <polygon points="106.03,307.435 106.03,284.778 98.878,284.778 98.878,317.805 108.068,317.805 123.081,293.908 123.081,317.805 130.232,317.805 130.232,284.778 120.258,284.778 "></polygon> <rect x="50.175" y="284.778" width="7.149" height="33.027"></rect> <path d="M152.625,283.424c-9.812,0-17.795,7.982-17.795,17.794c0,9.812,7.983,17.794,17.795,17.794s17.794-7.982,17.794-17.794 C170.419,291.407,162.437,283.424,152.625,283.424z M152.625,312.048c-5.972,0-10.83-4.858-10.83-10.829 c0-5.973,4.858-10.83,10.83-10.83c5.971,0,10.83,4.857,10.83,10.83C163.455,307.189,158.596,312.048,152.625,312.048z"></path> </g> </g> </svg>
+    </a>
+    <div class="hidden lg:flex items-center gap-5 font-sans text-nano uppercase">
+      <a href="#work" class="hover:text-vermilion" data-i18n="nav.work">Work</a>
+      <a href="#services" class="hover:text-vermilion" data-i18n="nav.services">Services</a>
+      <a href="#about" class="hover:text-vermilion" data-i18n="nav.about">About</a>
+      <a href="#process" class="hover:text-vermilion" data-i18n="nav.process">Process</a>
+      <a href="#contact" class="hover:text-vermilion" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-3 font-sans text-nano uppercase">
+      <div class="flex border border-white/30" role="group" aria-label="Language">
+        <button class="lang-btn px-2.5 min-h-[34px] cursor-pointer" data-lang="en">EN</button>
+        <button class="lang-btn px-2.5 min-h-[34px] cursor-pointer" data-lang="fi">FI</button>
+      </div>
+      <button id="grid-btn" class="hidden sm:inline-block text-white/60 hover:text-white cursor-pointer min-h-[34px]">[GRID: ON]</button>
+      <button class="open-inquiry px-4 min-h-[38px] font-sans text-sm uppercase bg-vermilion text-ink font-semibold hover:bg-[#F4F4F1] hover:text-ink transition-colors cursor-pointer" data-i18n="nav.cta">Start a project ↗</button>
+    </div>
+    </div>
+  </nav>
+
+  <!-- ============ 1. HERO POSTER ============ -->
+  <main id="top" class="w-full max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 pt-8 sm:pt-12 pb-16 sm:pb-24 flex flex-col justify-between">
+    <header class="grid grid-cols-1 md:grid-cols-12 items-start gap-y-6 md:gap-x-6 select-none">
+      <div class="md:col-span-6 flex items-stretch gap-3 sm:gap-5">
+        <div class="font-semibold text-poster-num">20</div>
+        <div class="pt-1 sm:pt-2 flex flex-col">
+          <span class="font-semibold text-poster-sub" data-i18n="hero.word">nordic design studio</span>
+          <div class="w-28 sm:w-44 lg:w-52 h-[10px] sm:h-[13px] bg-ink mt-4 sm:mt-7 mb-2"></div>
+          <div class="hero-foot mt-auto text-micro leading-tight">
+            <span class="font-semibold uppercase block" data-i18n="hero.tag">Small by design</span>
+            <span class="text-ink block" data-i18n="hero.meta">Brand &amp; UI/UX design</span>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-6 flex items-stretch justify-between md:justify-end gap-3 sm:gap-5">
+        <div class="pt-1 sm:pt-2 text-left md:text-right flex flex-col">
+          <span class="font-semibold text-poster-sub" data-i18n="hero.since">since twenty fifteen</span>
+          <div class="hero-foot mt-auto text-micro leading-tight">
+            <span class="block tabular-nums">61°27′48″N 24°04′22″E</span>
+            <span class="uppercase block">FINLAND</span>
+          </div>
+        </div>
+        <div class="font-semibold text-poster-num">15</div>
+      </div>
+    </header>
+
+    <div class="h-10 sm:h-16"></div>
+
+    <footer class="grid grid-cols-1 lg:grid-cols-12 items-end gap-y-10 lg:gap-x-8 pt-4">
+      <div class="lg:col-span-6 space-y-4">
+        <h1 class="poster-copy font-semibold text-2xl sm:text-4xl tracking-normal leading-[1.05] max-w-[560px]" data-i18n="hero.title">Brands and interfaces, designed in Finland.</h1>
+        <p class="text-sm sm:text-[15px] leading-[1.5] text-ink max-w-[440px]" data-i18n="hero.lead">INNO Design Studio is a small brand and UI/UX design studio. We help companies look clear and work simply — in Europe and in East Asia.</p>
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href="#work" class="px-6 min-h-[50px] inline-flex items-center border border-ink font-sans text-sm uppercase font-semibold hover:bg-ink hover:text-poster transition-colors" data-i18n="cta.work">See our work</a>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:pl-16 space-y-8">
+        <figure class="relative">
+          <img src="img/studio.webp" alt="A bright Nordic design studio: a laptop and a tablet showing interface wireframes on an oak table, shelves behind, a designer walking past" class="w-full aspect-[16/10] object-cover">
+          <div aria-hidden="true" class="absolute left-[-10%] top-[60%] w-[52%] h-[15%] bg-vermilion/85 mix-blend-multiply pointer-events-none"></div>
+          <figcaption class="mt-2 flex justify-between font-sans text-nano uppercase text-ink"><span>FIG. 01</span><span data-i18n="hero.fig">The studio, Finland</span></figcaption>
+        </figure>
+        <div class="grid grid-cols-2 gap-x-8 sm:gap-x-14 gap-y-6 text-micro leading-tight">
+          <div><span class="font-semibold uppercase block" data-i18n="hero.m1">Brand design</span><span class="text-ink block" data-i18n="hero.m1b">about 3 weeks · contact us for a quote</span></div>
+          <div class="text-right"><span class="font-semibold uppercase block" data-i18n="hero.m2">UI/UX design</span><span class="text-ink block" data-i18n="hero.m2b">about 3 weeks · contact us for a quote</span></div>
+          <div class="col-span-2"><div class="w-44 sm:w-64 h-[10px] sm:h-[13px] bg-ink"></div></div>
+          <div><span class="font-semibold uppercase block" data-i18n="hero.m3">Languages</span><span class="text-ink block">English · Suomi</span></div>
+          <div class="text-right"><span class="font-semibold uppercase block" data-i18n="hero.m4">Reply</span><span class="text-ink block" data-i18n="hero.m4b">within two working days</span></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============ 2. SERVICES ============ -->
+  <section id="services" class="border-t border-ink">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-28">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12 border-b border-ink">
+        <div class="flex items-start gap-4">
+          <div>
+            <span class="font-sans text-nano uppercase bg-vermilion text-ink font-semibold inline-block px-1.5 py-0.5" data-i18n="svc.eyebrow">Services // what we do</span>
+            <h2 class="font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-normal mt-2" data-i18n="svc.title">Brand, interface, language.</h2>
+          </div>
+        </div>
+        <p class="text-sm text-ink max-w-md leading-relaxed md:text-right" data-i18n="svc.lead">Two main services and one that ties them together. One small team, so your brand and your product are made to fit.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 pt-14">
+        <article class="bg-ink text-[#F4F4F1] border border-ink p-6 sm:p-8 flex flex-col gap-5">
+          <div class="flex justify-between font-sans text-nano uppercase"><span class="font-bold">[01]</span><span class="text-[#F4F4F1]/60" data-i18n="svc.from1">contact us</span></div>
+          <h3 class="font-semibold text-2xl sm:text-3xl tracking-normal" data-i18n="svc.s1">Brand design</h3>
+          <p class="text-sm leading-relaxed text-[#F4F4F1]/80" data-i18n="svc.s1p">A good brand is easy to recognise and easy to use. We start with your business and your customers, then design an identity your team can apply with confidence — on screen, in print and in new markets.</p>
+          <ul class="text-sm space-y-1.5 border-t border-[#F4F4F1] pt-4" data-i18n="svc.s1l"><li>— Brand strategy, positioning and tone of voice</li><li>— Logo and visual identity</li><li>— Brand guidelines your team can follow</li><li>— Packaging, print and editorial design</li><li>— Adaptation for Chinese and East Asian markets</li></ul>
+          <div class="w-12 h-[8px] bg-[#F4F4F1] mt-auto"></div>
+        </article>
+        <article class="bg-ink text-[#F4F4F1] border border-ink p-6 sm:p-8 flex flex-col gap-5">
+          <div class="flex justify-between font-sans text-nano uppercase"><span class="font-bold">[02]</span><span class="text-[#F4F4F1]/60" data-i18n="svc.from2">contact us</span></div>
+          <h3 class="font-semibold text-2xl sm:text-3xl tracking-normal" data-i18n="svc.s2">UI &amp; UX design</h3>
+          <p class="text-sm leading-relaxed text-[#F4F4F1]/80" data-i18n="svc.s2p">We design the screens and flows of websites and apps before a line of code is written. You see clickable prototypes early. When you need it built, our app team at RUSKA NORDIC Labs takes it to launch.</p>
+          <ul class="text-sm space-y-1.5 border-t border-[#F4F4F1] pt-4" data-i18n="svc.s2l"><li>— User research and user flows</li><li>— Wireframes and clickable prototypes</li><li>— UI design for iOS, Android and web</li><li>— Design systems and developer hand-off</li><li>— Websites designed and launched</li></ul>
+          <div class="w-12 h-[8px] bg-vermilion mt-auto"></div>
+        </article>
+        <article class="bg-ink text-[#F4F4F1] border border-ink p-6 sm:p-8 flex flex-col gap-5">
+          <div class="flex justify-between font-sans text-nano uppercase"><span class="font-bold">[03]</span><span class="text-[#F4F4F1]/60" data-i18n="svc.from3">contact us</span></div>
+          <h3 class="font-semibold text-2xl sm:text-3xl tracking-normal" data-i18n="svc.s3">Localization</h3>
+          <p class="text-sm leading-relaxed text-[#F4F4F1]/80" data-i18n="svc.s3p">Since 2015 we have produced and localized content for international clients. We adapt names, copy and interfaces so they feel native — not translated.</p>
+          <ul class="text-sm space-y-1.5 border-t border-[#F4F4F1] pt-4" data-i18n="svc.s3l"><li>— Website and interface localization</li><li>— Brand and marketing copy adaptation</li><li>— Chinese, Finnish, Swedish, Japanese and more</li><li>— Market-fit review of names, colours and imagery</li></ul>
+          <div class="w-12 h-[8px] bg-[#F4F4F1] mt-auto"></div>
+        </article>
+      </div>
+
+      <!-- packages -->
+      <div class="mt-16">
+        <div class="flex flex-wrap items-baseline justify-end gap-3 pb-4 border-b border-ink">
+          <span class="font-sans text-nano uppercase text-ink" data-i18n="pk.note">Fixed quote after a short intro call</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="border-b sm:border-r border-ink py-6 sm:pr-6 flex flex-col gap-2"><span class="font-sans text-nano uppercase text-ink">01</span><span class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight">Brand Starter</span><span class="text-sm text-ink" data-i18n="pk.p1">Logo, colours, typefaces and short guidelines.</span><button class="open-inquiry self-start mt-auto pt-4 font-semibold text-base tracking-normal hover:bg-vermilion cursor-pointer min-h-[44px]" data-i18n="pk.cta">Contact us ↗</button><span class="font-sans text-nano uppercase" data-i18n="pk.w">about 3 weeks</span></div>
+          <div class="border-b lg:border-r border-ink py-6 sm:pl-6 lg:pr-6 flex flex-col gap-2"><span class="font-sans text-nano uppercase text-ink">02</span><span class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight">Brand Identity</span><span class="text-sm text-ink" data-i18n="pk.p2">Brand strategy, full visual system and guidelines.</span><button class="open-inquiry self-start mt-auto pt-4 font-semibold text-base tracking-normal hover:bg-vermilion cursor-pointer min-h-[44px]" data-i18n="pk.cta">Contact us ↗</button><span class="font-sans text-nano uppercase" data-i18n="pk.w">about 3 weeks</span></div>
+          <div class="border-b sm:border-r border-ink py-6 sm:pr-6 lg:pl-6 flex flex-col gap-2"><span class="font-sans text-nano uppercase text-ink">03</span><span class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight">Website</span><span class="text-sm text-ink" data-i18n="pk.p3">A one-page website, designed and launched. Larger sites quoted by page.</span><button class="open-inquiry self-start mt-auto pt-4 font-semibold text-base tracking-normal hover:bg-vermilion cursor-pointer min-h-[44px]" data-i18n="pk.cta">Contact us ↗</button><span class="font-sans text-nano uppercase" data-i18n="pk.w">about 3 weeks</span></div>
+          <div class="border-b border-ink py-6 sm:pl-6 flex flex-col gap-2"><span class="font-sans text-nano uppercase text-ink">04</span><span class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight">App Design</span><span class="text-sm text-ink" data-i18n="pk.p4">UX research, prototypes and the full UI.</span><button class="open-inquiry self-start mt-auto pt-4 font-semibold text-base tracking-normal hover:bg-vermilion cursor-pointer min-h-[44px]" data-i18n="pk.cta">Contact us ↗</button><span class="font-sans text-nano uppercase" data-i18n="pk.w">about 3 weeks</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. WORK ============ -->
+  <section id="work" class="border-t border-ink">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-28">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12 border-b border-ink">
+        <div class="flex items-start gap-4">
+          <div>
+            <span class="font-sans text-nano uppercase bg-vermilion text-ink font-semibold inline-block px-1.5 py-0.5" data-i18n="work.eyebrow">Selected work // real projects</span>
+            <h2 class="font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-normal mt-2" data-i18n="work.title">Designed, built and used.</h2>
+          </div>
+        </div>
+        <p class="text-sm text-ink max-w-md leading-relaxed md:text-right" data-i18n="work.lead">Four apps we designed and run ourselves at RUSKA NORDIC Labs, and three brand and website projects. Click a project to read the case.</p>
+      </div>
+      <div id="work-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 pt-14"></div>
+    </div>
+  </section>
+
+  <!-- ============ 4. WHY + NUMBERS ============ -->
+  <section class="bg-[#DCDCDC]">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="space-y-3"><div class="w-10 h-[8px] bg-ink"></div><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="why.1">Small by design</h3><p class="text-sm text-ink leading-relaxed" data-i18n="why.1p">You work directly with the people designing your project. No hand-offs, no middle layer.</p></div>
+        <div class="space-y-3"><div class="w-10 h-[8px] bg-vermilion"></div><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="why.2">Brand and product, one team</h3><p class="text-sm text-ink leading-relaxed" data-i18n="why.2p">Your identity and your interface are designed together, so they look and feel like one company.</p></div>
+        <div class="space-y-3"><div class="w-10 h-[8px] bg-ink"></div><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="why.3">Understood across cultures</h3><p class="text-sm text-ink leading-relaxed" data-i18n="why.3p">We have worked between Europe and East Asia since 2015, in English, Finnish and Chinese.</p></div>
+      </div>
+      <div class="lg:col-span-5 flex justify-between gap-4 lg:pl-8 lg:border-l border-ink">
+        <div><span class="block font-semibold text-4xl sm:text-6xl tracking-normal tabular-nums">2015</span><span class="font-sans text-nano uppercase text-ink" data-i18n="num.1">designing since</span></div>
+        <div class="text-center"><span class="block font-semibold text-4xl sm:text-6xl tracking-normal">3</span><span class="font-sans text-nano uppercase text-ink" data-i18n="num.2">working languages</span></div>
+        <div class="text-right"><span class="block font-semibold text-4xl sm:text-6xl tracking-normal">4</span><span class="font-sans text-nano uppercase text-ink" data-i18n="num.3">apps of our own</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. PROCESS ============ -->
+  <section id="process">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-28">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12 border-b border-ink">
+        <div>
+          <span class="font-sans text-nano uppercase bg-vermilion text-ink font-semibold inline-block px-1.5 py-0.5" data-i18n="pr.eyebrow">Process // how we work</span>
+          <h2 class="font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-normal mt-2" data-i18n="pr.title">Four steps, about three weeks.</h2>
+        </div>
+      </div>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
+        <li class="space-y-3"><span class="font-sans text-nano uppercase font-semibold">STEP 01</span><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="pr.1">Discover</h3><p class="text-sm text-ink leading-relaxed" data-i18n="pr.1p">A free intro call about your business, your users and what success looks like.</p></li>
+        <li class="space-y-3"><span class="font-sans text-nano uppercase font-semibold">STEP 02</span><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="pr.2">Define</h3><p class="text-sm text-ink leading-relaxed" data-i18n="pr.2p">A short proposal with scope, timeline and a fixed price. Research and strategy before any visuals.</p></li>
+        <li class="space-y-3"><span class="font-sans text-nano uppercase font-semibold">STEP 03</span><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="pr.3">Design</h3><p class="text-sm text-ink leading-relaxed" data-i18n="pr.3p">Concepts, then one direction refined together. Clickable prototypes for UI/UX work.</p></li>
+        <li class="space-y-3"><span class="font-sans text-nano uppercase font-semibold">STEP 04</span><h3 class="font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="pr.4">Deliver</h3><p class="text-sm text-ink leading-relaxed" data-i18n="pr.4p">Final files, guidelines and hand-off — or launch with our team at RUSKA NORDIC Labs.</p></li>
+      </ol>
+
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <h3 class="lg:col-span-4 font-semibold text-2xl sm:text-3xl tracking-normal leading-tight" data-i18n="faq.title">Questions</h3>
+        <div class="lg:col-span-8 divide-y divide-ink border-y border-ink">
+          <details class="group py-4"><summary class="cursor-pointer font-semibold flex justify-between gap-4 min-h-[28px]"><span data-i18n="faq.q1">How long does a project take?</span><span class="font-sans text-ink group-open:rotate-45 transition-transform">+</span></summary><p class="mt-3 text-sm text-ink" data-i18n="faq.a1">Most projects take about three weeks from the signed proposal to final files.</p></details>
+          <details class="group py-4"><summary class="cursor-pointer font-semibold flex justify-between gap-4 min-h-[28px]"><span data-i18n="faq.q2">Do you work with clients outside Finland?</span><span class="font-sans text-ink group-open:rotate-45 transition-transform">+</span></summary><p class="mt-3 text-sm text-ink" data-i18n="faq.a2">Yes. We work remotely with clients in Europe and East Asia.</p></details>
+          <details class="group py-4"><summary class="cursor-pointer font-semibold flex justify-between gap-4 min-h-[28px]"><span data-i18n="faq.q3">Can you also build the app?</span><span class="font-sans text-ink group-open:rotate-45 transition-transform">+</span></summary><p class="mt-3 text-sm text-ink" data-i18n="faq.a3">Yes, together with RUSKA NORDIC Labs, our app development team.</p></details>
+          <details class="group py-4"><summary class="cursor-pointer font-semibold flex justify-between gap-4 min-h-[28px]"><span data-i18n="faq.q4">Which languages can we work in?</span><span class="font-sans text-ink group-open:rotate-45 transition-transform">+</span></summary><p class="mt-3 text-sm text-ink" data-i18n="faq.a4">English, Finnish and Chinese.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. ABOUT ============ -->
+  <section id="about" class="border-t border-ink">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-5 space-y-5">
+        <span class="font-sans text-nano uppercase bg-vermilion text-ink font-semibold inline-block px-1.5 py-0.5" data-i18n="ab.eyebrow">About // Kangasala, Finland</span>
+        <h2 class="font-semibold text-4xl sm:text-6xl lg:text-7xl tracking-normal leading-[0.95]" data-i18n="ab.title">A small studio in Finland, working across cultures.</h2>
+        <p class="text-sm sm:text-[15px] text-ink leading-relaxed" data-i18n="ab.lead">INNO Design Studio is a brand and UI/UX design studio based in Kangasala, Finland. We are a small team on purpose: every project is designed by the people you talk to.</p>
+      </div>
+      <div class="lg:col-span-7 lg:pl-10">
+        <ol class="border-t border-ink">
+          <li class="grid grid-cols-[88px_1fr] sm:grid-cols-[120px_1fr] gap-4 py-5 border-b border-ink"><span class="font-semibold text-2xl tabular-nums">2015</span><p class="text-sm leading-relaxed" data-i18n="ab.t1">Founded as a design and communications company, producing and localizing content for international clients in the Chinese market.</p></li>
+          <li class="grid grid-cols-[88px_1fr] sm:grid-cols-[120px_1fr] gap-4 py-5 border-b border-ink"><span class="font-semibold text-2xl tabular-nums">2016</span><p class="text-sm leading-relaxed" data-i18n="ab.t2">Began representing Nordic design in East Asia, bringing European lifestyle products to new customers.</p></li>
+          <li class="grid grid-cols-[88px_1fr] sm:grid-cols-[120px_1fr] gap-4 py-5 border-b border-ink"><span class="font-semibold text-2xl tabular-nums">2018</span><p class="text-sm leading-relaxed" data-i18n="ab.t3">Launched RUSKA NORDIC, our brand for mobile apps and fine porcelain trade.</p></li>
+          <li class="grid grid-cols-[88px_1fr] sm:grid-cols-[120px_1fr] gap-4 py-5 border-b border-ink"><span class="font-semibold text-2xl self-start bg-vermilion px-1.5" data-i18n="ab.now">Today</span><p class="text-sm leading-relaxed" data-i18n="ab.t4">Focused on brand design and UI/UX design, with our own apps as a working lab for what we design for clients.</p></li>
+        </ol>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
+          <p class="text-sm"><span class="font-semibold block" data-i18n="v.1">Clear over clever</span><span class="text-ink" data-i18n="v.1p">If people need to think, the design is not done.</span></p>
+          <p class="text-sm"><span class="font-semibold block" data-i18n="v.2">Made to be used</span><span class="text-ink" data-i18n="v.2p">Guidelines and screens your team can work with.</span></p>
+          <p class="text-sm"><span class="font-semibold block" data-i18n="v.3">Respect for every culture</span><span class="text-ink" data-i18n="v.3p">We design for the people who will read it.</span></p>
+        </div>
+        <a href="https://ruskanordic.com" class="inline-flex items-center gap-2 mt-8 min-h-[44px] font-sans text-nano uppercase font-semibold underline decoration-vermilion decoration-2 underline-offset-4 hover:bg-vermilion" data-i18n="ab.ruska">Our other brand: RUSKA NORDIC — apps and fine porcelain ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CONTACT / MANIFESTO ============ -->
+  <section id="contact" class="w-full bg-ink text-[#E5E5E5]">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 py-20 sm:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#E5E5E5]">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="w-24 h-[10px] bg-vermilion"></div>
+          <h2 class="font-semibold text-3xl sm:text-5xl tracking-normal leading-[0.95]" data-i18n="ct.title">Have a project in mind?</h2>
+          <p class="text-sm sm:text-[15px] text-[#E5E5E5]/75 max-w-xl leading-relaxed" data-i18n="ct.lead">Tell us what you are building. We reply within two working days.</p>
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <button id="copy-email" class="px-6 min-h-[50px] border border-[#E5E5E5]/30 font-sans text-sm uppercase font-semibold hover:border-[#E5E5E5] transition-colors cursor-pointer">info@innostudio.net</button>
+            <span id="copy-toast" class="hidden font-sans text-sm text-vermilion uppercase" data-i18n="ct.copied">[COPIED]</span>
+          </div>
+        </div>
+        <div class="lg:col-span-5 grid grid-cols-2 gap-8 font-sans text-nano uppercase">
+          <div class="space-y-2">
+            <span class="text-[#E5E5E5]/50 block" data-i18n="ct.s">01 // Services</span>
+            <p data-i18n="hero.m1">Brand design</p><p data-i18n="hero.m2">UI/UX design</p><p data-i18n="svc.s3">Localization</p>
+          </div>
+          <div class="space-y-2 text-right">
+            <span class="text-[#E5E5E5]/50 block" data-i18n="ct.c">02 // Contact</span>
+            <p>Katajatie 16</p><p>36200 Kangasala, Finland</p><p>61°27′48″N 24°04′22″E</p>
+            <p class="pt-2"><a href="tel:+358465393901" class="hover:text-vermilion">+358 46 539 3901</a></p>
+            <p>info@innostudio.net</p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+        <svg viewBox="48 281 481 40" class="w-full max-w-[720px] h-auto text-[#E5E5E5]" fill="currentColor" role="img" aria-label="INNO Design Studio"><g> <g> <path d="M203.317,285.339h12.082c8.795,0,14.125,5.685,14.125,15.901c0,10.217-5.241,15.857-14.036,15.857h-12.171V285.339z M215.177,312.879c7.374,0,9.284-5.509,9.284-11.639c0-6.129-1.91-11.682-9.284-11.682h-6.973v23.321H215.177z"></path> <path d="M234.362,285.339h22.476v4.219h-17.589v9.017h15.413v4.221h-15.413v10.083h18.034v4.219h-22.92V285.339z"></path> <path d="M259.768,306.393h5.063c0.355,4.265,2.887,7.152,8.839,7.152c5.108,0,6.663-2.221,6.663-5.11 c0-4.04-3.109-4.616-8.883-6.084c-4.975-1.332-10.438-2.932-10.438-8.972c0-5.508,4.263-8.662,11.104-8.662 c7.24,0,11.948,3.687,12.437,10.083h-5.063c-0.533-3.82-2.71-5.907-7.33-5.907c-3.997,0-6.041,1.466-6.041,4.22 c0,3.553,3.332,4.308,7.418,5.33c6.129,1.555,11.904,3.021,11.904,9.728c0,5.464-3.687,9.549-11.637,9.549 C265.764,317.719,260.123,313.545,259.768,306.393z"></path> <path d="M289.924,285.339h4.886v31.759h-4.886V285.339z"></path> <path d="M299.606,301.196c0-9.549,5.819-16.479,14.88-16.479c8.217,0,12.57,4.397,13.592,10.438h-5.107 c-0.844-3.997-3.82-6.219-8.528-6.219c-7.019,0-9.728,6.308-9.728,12.26c0,5.997,2.043,12.303,9.461,12.303 c5.242,0,9.416-3.643,9.461-8.926h-9.372v-4.088h14.347v16.612h-3.376l-1.198-4.397h-0.089c-2.222,3.244-5.198,5.019-10.04,5.019 C304.76,317.719,299.606,310.79,299.606,301.196z"></path> <path d="M333.851,285.339h5.597l14.746,24.431h0.09v-24.431h4.93v31.759h-5.596l-14.791-24.43h-0.09v24.43h-4.886V285.339z"></path> <path d="M372.846,306.57h3.376c0.444,4.931,3.465,8.262,10.083,8.262c5.863,0,7.862-2.799,7.862-6.307 c0.044-4.707-3.243-5.508-9.772-6.975c-5.197-1.199-10.216-2.797-10.216-8.617c0-5.063,4.042-8.173,10.571-8.173 c6.885,0,11.238,3.509,11.727,9.728h-3.376c-0.533-4.397-2.976-6.886-8.351-6.886c-4.664,0-7.195,1.911-7.195,5.198 c0,4.264,3.775,5.152,8.439,6.174c6.529,1.421,11.548,3.02,11.548,9.459c0,5.154-3.553,9.24-11.104,9.24 C378.798,317.675,373.29,313.722,372.846,306.57z"></path> <path d="M408.956,288.182h-10.794v-2.843h24.829v2.843h-10.837v28.916h-3.198V288.182z"></path> <path d="M426.765,306.393v-21.054h3.243v21.054c0,5.687,2.843,8.439,8.706,8.439c5.862,0,8.706-2.753,8.706-8.439v-21.054h3.242 v21.054c0,6.751-3.643,11.282-11.948,11.282S426.765,313.144,426.765,306.393z"></path> <path d="M457.189,285.339h11.504c8.884,0,13.814,6.13,13.814,15.947c0,9.815-5.063,15.812-13.947,15.812h-11.371V285.339z M468.561,314.254c7.95,0,10.571-5.95,10.571-12.968c0-7.063-2.487-13.104-10.482-13.104h-8.219v26.072H468.561z"></path> <path d="M487.702,285.339h3.242v31.759h-3.242V285.339z"></path> <path d="M496.097,301.196c0-9.549,6.084-16.435,15.278-16.435c9.15,0,15.235,6.886,15.235,16.435 c0,9.549-6.085,16.479-15.235,16.479C502.181,317.675,496.097,310.745,496.097,301.196z M511.375,314.832 c7.818,0,11.86-6.129,11.86-13.636c0-7.507-4.042-13.593-11.86-13.593c-7.862,0-11.904,6.085-11.904,13.593 C499.471,308.703,503.513,314.832,511.375,314.832z"></path> </g> <g> <path d="M183.415,284.438c-5.8,0-10.519,4.72-10.519,10.522c0,5.799,4.719,10.516,10.519,10.516c5.801,0,10.52-4.717,10.52-10.516 C193.935,289.158,189.216,284.438,183.415,284.438z M183.415,303.368c-4.637,0-8.41-3.771-8.41-8.408 c0-4.64,3.773-8.415,8.41-8.415c4.639,0,8.413,3.775,8.413,8.415C191.828,299.597,188.054,303.368,183.415,303.368z"></path> <path d="M188.253,299.433c-0.089-1.39-0.22-3.424-1.724-4.067c1.14-0.468,1.85-1.56,1.85-2.907c0-2.31-1.489-3.582-4.194-3.582 h-5.104v12.174h2.17v-4.63h2.867c1.863,0,1.908,1.883,1.94,3.257c0.016,0.68,0.026,1.128,0.238,1.326l0.05,0.047h2.197 l0.007-0.417l-0.124-0.038C188.323,300.516,188.283,299.89,188.253,299.433z M181.251,290.799h2.569 c1.64,0,2.371,0.553,2.371,1.791c0,1.578-1.307,1.909-2.404,1.909h-2.536V290.799z"></path> </g> <g> <polygon points="69.486,307.435 69.486,284.778 62.334,284.778 62.334,317.805 71.524,317.805 86.537,293.908 86.537,317.805 93.688,317.805 93.688,284.778 83.715,284.778 "></polygon> <polygon points="106.03,307.435 106.03,284.778 98.878,284.778 98.878,317.805 108.068,317.805 123.081,293.908 123.081,317.805 130.232,317.805 130.232,284.778 120.258,284.778 "></polygon> <rect x="50.175" y="284.778" width="7.149" height="33.027"></rect> <path d="M152.625,283.424c-9.812,0-17.795,7.982-17.795,17.794c0,9.812,7.983,17.794,17.795,17.794s17.794-7.982,17.794-17.794 C170.419,291.407,162.437,283.424,152.625,283.424z M152.625,312.048c-5.972,0-10.83-4.858-10.83-10.829 c0-5.973,4.858-10.83,10.83-10.83c5.971,0,10.83,4.857,10.83,10.83C163.455,307.189,158.596,312.048,152.625,312.048z"></path> </g> </g> </svg>
+        <div class="font-sans text-nano uppercase text-[#E5E5E5]/55 text-left sm:text-right shrink-0">
+          <p>© 2026 INNO DESIGN STUDIO</p>
+          <p>BUSINESS ID 2765454-9</p>
+          <p><button id="open-privacy" class="underline underline-offset-4 hover:text-vermilion cursor-pointer" data-i18n="ct.priv">Privacy</button></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE DRAWER ============ -->
+  <div id="drawer" class="fixed inset-0 z-50 hidden bg-ink/80 justify-end" role="dialog" aria-modal="true" aria-labelledby="d-title">
+    <div id="drawer-panel" class="w-full max-w-3xl h-full bg-poster text-ink border-l border-ink p-6 sm:p-12 overflow-y-auto no-scrollbar flex flex-col justify-between translate-x-full transition-transform duration-500 ease-swiss">
+      <div class="space-y-8">
+        <div class="flex items-center justify-between pb-4 border-b border-ink">
+          <span id="d-badge" class="font-sans text-nano uppercase bg-vermilion text-ink px-2.5 py-1 font-medium">WORK-APP-01 · 2026</span>
+          <button id="d-close" class="font-sans text-nano uppercase px-3 min-h-[36px] border border-ink hover:bg-ink hover:text-poster cursor-pointer font-semibold" data-i18n="d.close">Close [Esc]</button>
+        </div>
+        <div>
+          <h2 id="d-title" class="font-semibold text-3xl sm:text-5xl uppercase tracking-normal leading-[0.92]"></h2>
+          <p id="d-sub" class="text-sm sm:text-base text-ink mt-2"></p>
+          <div class="w-32 h-[10px] bg-ink mt-5"></div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-ink font-sans text-nano uppercase">
+          <div><span class="text-ink block" data-i18n="d.client">Client</span><span id="d-client" class="font-bold"></span></div>
+          <div><span class="text-ink block" data-i18n="d.year">Year</span><span id="d-year" class="font-bold"></span></div>
+          <div><span class="text-ink block" data-i18n="d.svc">Services</span><span id="d-svc" class="font-bold"></span></div>
+          <div><span class="text-ink block" data-i18n="d.status">Status</span><span id="d-status" class="font-bold bg-vermilion text-ink px-1"></span></div>
+        </div>
+        <div id="d-plate" class="w-full aspect-[16/10] bg-[#DCDCDC] border border-ink overflow-hidden"></div>
+        <div id="d-links" class="flex flex-wrap gap-3"></div>
+        <div class="space-y-5 text-sm sm:text-base leading-relaxed">
+          <div><h3 class="font-sans text-nano uppercase font-semibold bg-vermilion text-ink inline-block px-1.5 py-0.5 mb-2" data-i18n="d.ch">The challenge</h3><p id="d-ch"></p></div>
+          <div><h3 class="font-sans text-nano uppercase font-semibold bg-vermilion text-ink inline-block px-1.5 py-0.5 mb-2" data-i18n="d.did">What we did</h3><p id="d-did"></p></div>
+          <div><h3 class="font-sans text-nano uppercase font-semibold bg-vermilion text-ink inline-block px-1.5 py-0.5 mb-2" data-i18n="d.res">The result</h3><p id="d-res"></p></div>
+        </div>
+      </div>
+      <div class="pt-8 mt-10 border-t border-ink flex flex-wrap gap-3 items-center justify-between">
+        <button id="d-inquire" class="px-6 min-h-[50px] bg-ink text-poster font-sans text-sm uppercase font-semibold hover:bg-vermilion hover:text-ink cursor-pointer" data-i18n="d.similar">Start a similar project ↗</button>
+        <button id="d-next" class="font-sans text-sm uppercase font-semibold hover:bg-vermilion px-2 cursor-pointer min-h-[44px]" data-i18n="d.next">Next project →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ INQUIRY MODAL ============ -->
+  <div id="inquiry" class="fixed inset-0 z-50 hidden bg-ink/80 items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="q-title">
+    <div class="w-full max-w-lg max-h-[92vh] overflow-y-auto bg-poster text-ink border border-ink p-6 sm:p-10">
+      <div class="flex items-start justify-between pb-5 border-b border-ink mb-6">
+        <div>
+          <span class="font-sans text-nano uppercase bg-vermilion text-ink font-semibold inline-block px-1.5 py-0.5" data-i18n="q.eyebrow">Reply within two working days</span>
+          <h3 id="q-title" class="font-semibold text-2xl tracking-normal mt-1" data-i18n="q.title">Tell us about your project</h3>
+        </div>
+        <button id="q-close" class="font-sans text-nano uppercase px-2.5 min-h-[34px] border border-ink hover:bg-ink hover:text-poster cursor-pointer">ESC</button>
+      </div>
+      <form id="q-form" class="space-y-5" novalidate>
+        <div><label for="q-name" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.name">01 // Name *</label><input id="q-name" type="text" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
+        <div><label for="q-email" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.email">02 // Email *</label><input id="q-email" type="email" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
+        <div><label for="q-co" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.co">03 // Company</label><input id="q-co" type="text" class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
+        <div><label for="q-need" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.need">04 // What do you need?</label>
+          <select id="q-need" class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion">
+            <option data-i18n="hero.m1">Brand design</option><option data-i18n="hero.m2">UI/UX design</option><option data-i18n="svc.s3">Localization</option><option data-i18n="q.unsure">Not sure yet</option>
+          </select></div>
+        <div><label for="q-msg" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.msg">05 // Message *</label><textarea id="q-msg" rows="3" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion resize-none"></textarea></div>
+        <p id="q-err" class="hidden font-sans text-nano uppercase bg-vermilion text-ink px-1.5 py-1" data-i18n="q.err">Please fill in name, a valid email and a message.</p>
+        <button type="submit" class="w-full min-h-[48px] bg-ink text-poster hover:bg-vermilion hover:text-ink font-sans text-nano uppercase font-semibold transition-colors cursor-pointer" data-i18n="q.send">Write the email ↗</button>
+      </form>
+      <div id="q-done" class="hidden py-6 space-y-4">
+        <div class="w-12 h-[8px] bg-vermilion"></div>
+        <h4 class="font-semibold text-2xl" data-i18n="q.done">Almost there</h4>
+        <p class="text-sm leading-relaxed" data-i18n="q.doneP">Your email app should open with your message. If it does not, send it to info@innostudio.net — we reply within two working days.</p>
+        <a id="q-mailto" href="mailto:info@innostudio.net" class="inline-flex items-center min-h-[44px] font-sans text-nano uppercase underline font-semibold">info@innostudio.net ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PRIVACY ============ -->
+  <div id="privacy" class="fixed inset-0 z-50 hidden bg-ink/80 items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="p-title">
+    <div class="w-full max-w-lg bg-poster text-ink border border-ink p-6 sm:p-10 space-y-4">
+      <div class="flex justify-between items-start"><h3 id="p-title" class="font-semibold text-2xl" data-i18n="ct.priv">Privacy</h3><button id="p-close" class="font-sans text-nano uppercase px-2.5 min-h-[34px] border border-ink cursor-pointer">ESC</button></div>
+      <p class="text-sm leading-relaxed" data-i18n="p.body">This website does not use cookies or tracking. If you email us, we use your name, email and message only to reply about your project, and delete them when they are no longer needed. Controller: INNO Design Studio, Business ID 2765454-9, Katajatie 16, 36200 Kangasala, Finland. Questions: info@innostudio.net.</p>
+    </div>
+  </div>
+
+  <script>
+  {
+    /* ---------- content: the six real projects ---------- */
+    const W = [
+      { key:'wico', links:[['play','https://play.google.com/store/apps/details?id=fi.wico.app'],['app','https://ruskanordic.com/labs/wico/']], disc:'CONCEPT + UI/UX', type:'app', code:'WICO', year:'2026', svcs:'UX · UI', client:'RUSKA NORDIC Labs',
+        status:{en:'Live',fi:'Julkaistu'},
+        sub:{en:'School messages, sorted',fi:'Koulun viestit selkeiksi'},
+        ch:{en:'Parents who are new to Finland receive school, daycare and club messages in Finnish. Important dates and things to bring are easy to miss.',
+            
+            fi:'Suomeen muuttaneet vanhemmat saavat koulun, päiväkodin ja harrastusten viestit suomeksi. Tärkeät päivät ja mukaan otettavat asiat jäävät helposti huomaamatta.'},
+        did:{en:'We designed an app that explains each message in the parent’s own language and pulls out dates, deadlines and things to bring. The interface puts the action first and the translation second.',
+             
+             fi:'Suunnittelimme sovelluksen, joka selittää jokaisen viestin vanhemman omalla kielellä ja poimii päivämäärät, määräajat ja mukaan otettavat asiat. Käyttöliittymä näyttää ensin tehtävän, sitten käännöksen.'},
+        res:{en:'Wico is live. Designed, built and run by our own team at RUSKA NORDIC Labs.',fi:'Wico on julkaistu. Sen on suunnitellut, rakentanut ja sitä ylläpitää oma tiimimme RUSKA NORDIC Labsissa.'} },
+      { key:'duel', links:[['play','https://play.google.com/store/apps/details?id=net.innostudio.timeduel'],['app','https://ruskanordic.com/labs/time-duel/']], disc:'CONCEPT + UI/UX', type:'app', code:'TIME DUEL', year:'2026', svcs:'UI · GAME UX', client:'RUSKA NORDIC Labs',
+        status:{en:'Live on Google Play',fi:'Google Playssa'},
+        sub:{en:'One phone. Two rivals.',fi:'Yksi puhelin. Kaksi kilpailijaa.'},
+        ch:{en:'A split-second timing game has to be readable at a glance, by two people holding one phone from opposite ends.',fi:'Sekunnin murto-osien ajoituspeli on luettava yhdellä silmäyksellä – kahden pelaajan pitäessä samaa puhelinta eri päistä.'},
+        did:{en:'We split the screen into two mirrored halves, each with one large stop button and one large number, and kept everything else out of the way.',fi:'Jaoimme näytön kahteen peilattuun puoliskoon, joissa kummassakin on yksi iso pysäytyspainike ja yksi iso numero. Kaikki muu pysyy poissa tieltä.'},
+        res:{en:'Time Duel is live on Google Play. You can duel a friend on one phone or train alone.',fi:'Time Duel on julkaistu Google Playssa. Voit haastaa ystävän samalla puhelimella tai harjoitella yksin.'} },
+      { key:'fermo', links:[['app','https://ruskanordic.com/labs/fermo/']], disc:'CONCEPT + UI/UX', type:'app', code:'FERMO', year:'2026', svcs:'UX RESEARCH · UI', client:'RUSKA NORDIC Labs',
+        status:{en:'In development',fi:'Kehitteillä'},
+        sub:{en:'Baker’s percentage notebook',fi:'Leipojan prosenttimuistikirja'},
+        ch:{en:'Home bakers scale recipes, try new versions and forget what worked. Paper notes and generic recipe apps do not handle baker’s percentages.',fi:'Kotileipojat skaalaavat reseptejä, kokeilevat uusia versioita ja unohtavat, mikä toimi. Paperimuistiinpanot ja tavalliset reseptisovellukset eivät tue leipojan prosentteja.'},
+        did:{en:'We designed a notebook built on baker’s percentages: scale recipes, keep versions, follow timed bake steps and log tastings — all offline.',fi:'Suunnittelimme leipojan prosentteihin perustuvan muistikirjan: skaalaa reseptit, tallenna versiot, seuraa ajastettuja leivontavaiheita ja kirjaa maistelut – kaikki ilman verkkoyhteyttä.'},
+        res:{en:'FERMO is in development at RUSKA NORDIC Labs.',fi:'FERMO on kehitteillä RUSKA NORDIC Labsissa.'} },
+      { key:'fly', links:[['app','https://ruskanordic.com/labs/flydrop/']], disc:'CONCEPT + UI/UX', type:'app', code:'FLYDROP', year:'2026', svcs:'FLOW · UI', client:'RUSKA NORDIC Labs',
+        status:{en:'In development',fi:'Kehitteillä'},
+        sub:{en:'Photos to clean PDFs',fi:'Kuvista siistejä PDF-tiedostoja'},
+        ch:{en:'Photographing paper documents is quick, but the results are crooked, shadowed and spread across many images.',fi:'Paperiasiakirjan kuvaaminen on nopeaa, mutta kuvat ovat vinoja, varjoisia ja hajallaan monessa tiedostossa.'},
+        did:{en:'We designed a three-step flow: shoot, check, share. Page edges are found and straightened automatically, and everything stays on the device.',fi:'Suunnittelimme kolmivaiheisen kulun: kuvaa, tarkista, jaa. Sivun reunat tunnistetaan ja suoristetaan automaattisesti, ja kaikki pysyy laitteella.'},
+        res:{en:'FlyDrop is in development at RUSKA NORDIC Labs.',fi:'FlyDrop on kehitteillä RUSKA NORDIC Labsissa.'} },
+      { key:'ruska', links:[['web','https://ruskanordic.com/']], disc:'UI/UX', type:'web', code:'RUSKA NORDIC', year:'2026', svcs:'BRAND · WEB', client:'RUSKA NORDIC',
+        status:{en:'Live · ruskanordic.com',fi:'Julkaistu · ruskanordic.com'},
+        sub:{en:'One brand, two crafts: apps and fine porcelain',fi:'Yksi brändi, kaksi osaamista: sovellukset ja hieno posliini'},
+        ch:{en:'Two very different businesses — mobile apps and porcelain trade — needed to sit under one calm, credible brand.',fi:'Kaksi hyvin erilaista liiketoimintaa – mobiilisovellukset ja posliinikauppa – piti tuoda yhden rauhallisen ja uskottavan brändin alle.'},
+        did:{en:'We set up the brand structure, designed an editorial, magazine-style website with equal weight for Labs and Trade, and launched it on low-cost hosting.',fi:'Rakensimme brändirakenteen, suunnittelimme aikakauslehtimäisen verkkosivuston, jossa Labs ja Trade ovat yhtä painavia, ja julkaisimme sen edulliselle alustalle.'},
+        res:{en:'The site is live at ruskanordic.com.',fi:'Sivusto on julkaistu osoitteessa ruskanordic.com.'} },
+      { key:'innopub', links:[['web','https://www.innopublishing.com/']], disc:'UI/UX', type:'web', code:'INNOPUBLISHING', year:'2026', svcs:'BRAND · WEB', client:'INNO MEDIA & PUBLISHING',
+        status:{en:'Live · innopublishing.com',fi:'Julkaistu · innopublishing.com'},
+        sub:{en:'Academic & scholarly publishing, in English and Chinese',fi:'Akateemista julkaisutoimintaa englanniksi ja kiinaksi'},
+        ch:{en:'A scholarly press had outgrown its template website. It needed an independent, bilingual site where readers can browse the catalogue and authors can find publishing services.',
+            fi:'Tieteellinen kustantamo oli kasvanut ulos valmispohjaisesta sivustostaan. Se tarvitsi itsenäisen, kaksikielisen sivuston, jossa lukijat selaavat julkaisuja ja kirjoittajat löytävät kustannuspalvelut.'},
+        did:{en:'We designed a calm, cultured site: a green reading-room hero, Gloock and Gowun Batang type, English and Traditional Chinese side by side, a catalogue by series and four publishing services — then moved it off Wix to its own hosting and domain email.',
+             fi:'Suunnittelimme rauhallisen ja sivistyneen sivuston: vihreä lukusalikuva, Gloock- ja Gowun Batang -kirjasimet, englanti ja perinteinen kiina rinnakkain, sarjoittain järjestetty luettelo ja neljä kustannuspalvelua – ja siirsimme sen Wixistä omalle alustalle ja omaan sähköpostiin.'},
+        res:{en:'The site is live at innopublishing.com. Online PDF sales are being added.',fi:'Sivusto on julkaistu osoitteessa innopublishing.com. PDF-verkkomyyntiä ollaan lisäämässä.'} },
+      { key:'inno', links:[['web','https://www.innostudio.net/']], disc:'BRANDING', type:'brand', code:'INNO DESIGN STUDIO', year:'2026', svcs:'BRAND · WEB', client:'INNO DESIGN STUDIO',
+        status:{en:'You are looking at it',fi:'Katselet sitä nyt'},
+        sub:{en:'Our own rebrand',fi:'Oma brändiuudistuksemme'},
+        ch:{en:'After ten years our site still described the company we were in 2015, not the brand and UI/UX studio we are today.',fi:'Kymmenen vuoden jälkeen sivustomme kuvasi yhä vuoden 2015 yritystä, ei nykyistä brändi- ja UI/UX-studiota.'},
+        did:{en:'A new logo, a Swiss-Nordic poster system and a three-language website in English, Chinese and Finnish.',fi:'Uusi logo, sveitsiläis-pohjoismainen julistejärjestelmä ja kolmikielinen sivusto englanniksi, kiinaksi ja suomeksi.'},
+        res:{en:'This website.',fi:'Tämä sivusto.'} }
+    ];
+
+    /* ---------- translations (English is read from the page) ---------- */
+    const T = {
+      fi: {
+        'nav.work':'Työt','nav.services':'Palvelut','nav.about':'Meistä','nav.process':'Prosessi','nav.contact':'Yhteystiedot','nav.cta':'Aloita projekti ↗',
+        'hero.tag':'Tarkoituksella pieni','hero.word':'pohjoismainen designstudio','hero.fig':'Studio, Suomi','hero.meta':'Brändi- ja UI/UX-suunnittelu','hero.since':'vuodesta kaksituhattaviisitoista','hero.case':'Lue tapaus ↗',
+        'hero.title':'Brändejä ja käyttöliittymiä, suunniteltu Suomessa.','hero.lead':'INNO Design Studio on pieni brändi- ja UI/UX-suunnittelustudio. Autamme yrityksiä näyttämään selkeiltä ja toimimaan yksinkertaisesti – Euroopassa ja Itä-Aasiassa.',
+        'cta.start':'Aloita projekti ↗','cta.work':'Katso työmme',
+        'hero.m1':'Brändisuunnittelu','hero.m1b':'noin 3 viikkoa · pyydä tarjous','hero.m2':'UI/UX-suunnittelu','hero.m2b':'noin 3 viikkoa · pyydä tarjous','hero.m3':'Kielet','hero.m4':'Vastaus','hero.m4b':'kahden arkipäivän kuluessa',
+        'svc.eyebrow':'Palvelut // mitä teemme','svc.title':'Brändi, käyttöliittymä, kieli.','svc.lead':'Kaksi pääpalvelua ja yksi, joka sitoo ne yhteen. Yksi pieni tiimi, joten brändisi ja tuotteesi sopivat yhteen.',
+        'svc.from1':'ota yhteyttä','svc.from2':'ota yhteyttä','svc.from3':'ota yhteyttä',
+        'svc.s1':'Brändisuunnittelu','svc.s1p':'Hyvä brändi on helppo tunnistaa ja helppo käyttää. Aloitamme yrityksestäsi ja asiakkaistasi ja suunnittelemme ilmeen, jota tiimisi voi käyttää varmasti – näytöllä, painotuotteissa ja uusilla markkinoilla.',
+        'svc.s1l':'<li>— Brändistrategia, asemointi ja äänensävy</li><li>— Logo ja visuaalinen ilme</li><li>— Brändiohjeisto, jota tiimi voi noudattaa</li><li>— Pakkaus-, paino- ja taittosuunnittelu</li><li>— Sovitus Kiinan ja Itä-Aasian markkinoille</li>',
+        'svc.s2':'UI- ja UX-suunnittelu','svc.s2p':'Suunnittelemme verkkosivujen ja sovellusten näkymät ja polut ennen ensimmäistäkään koodiriviä. Näet klikattavat prototyypit varhain. Kun tarvitset toteutuksen, RUSKA NORDIC Labsin tiimi vie sen julkaisuun.',
+        'svc.s2l':'<li>— Käyttäjätutkimus ja käyttäjäpolut</li><li>— Rautalankamallit ja klikattavat prototyypit</li><li>— UI-suunnittelu iOS:lle, Androidille ja webiin</li><li>— Design-järjestelmät ja luovutus kehittäjille</li><li>— Verkkosivujen suunnittelu ja julkaisu</li>',
+        'svc.s3':'Lokalisointi','svc.s3p':'Olemme tuottaneet ja lokalisoineet sisältöä kansainvälisille asiakkaille vuodesta 2015. Sovitamme nimet, tekstit ja käyttöliittymät niin, että ne tuntuvat alkuperäisiltä – eivät käännetyiltä.',
+        'svc.s3l':'<li>— Verkkosivujen ja käyttöliittymien lokalisointi</li><li>— Brändi- ja markkinointitekstien sovitus</li><li>— Kiina, suomi, ruotsi, japani ja muut</li><li>— Nimien, värien ja kuvien markkinasopivuuden tarkistus</li>',
+        'pk.title':'Paketit','pk.note':'Kiinteä tarjous lyhyen aloituspuhelun jälkeen','pk.p1':'Logo, värit, kirjasimet ja lyhyt ohjeisto.','pk.p2':'Brändistrategia, täysi visuaalinen järjestelmä ja ohjeisto.','pk.p3':'Yhden sivun verkkosivusto suunniteltuna ja julkaistuna. Laajemmat sivustot sivumäärän mukaan.','pk.p4':'UX-tutkimus, prototyypit ja koko käyttöliittymä.','pk.w':'noin 3 viikkoa','pk.cta':'Ota yhteyttä ↗','pk.from':'Kaikki hinnat ovat alkaen-hintoja.',
+        'work.eyebrow':'Valitut työt // oikeita projekteja','work.title':'Suunniteltu, rakennettu ja käytössä.','work.lead':'Neljä sovellusta, jotka olemme suunnitelleet ja joita ylläpidämme itse RUSKA NORDIC Labsissa, sekä kolme brändi- ja verkkosivuprojektia. Avaa projekti lukeaksesi tapauksen.',
+        'why.1':'Tarkoituksella pieni','why.1p':'Työskentelet suoraan projektiasi suunnittelevien ihmisten kanssa. Ei välikäsiä.','why.2':'Brändi ja tuote, yksi tiimi','why.2p':'Ilme ja käyttöliittymä suunnitellaan yhdessä, joten ne näyttävät ja tuntuvat samalta yritykseltä.','why.3':'Ymmärretty kulttuurien yli','why.3p':'Olemme työskennelleet Euroopan ja Itä-Aasian välillä vuodesta 2015 englanniksi, suomeksi ja kiinaksi.',
+        'num.1':'suunnitellut vuodesta','num.2':'työkieltä','num.3':'omaa sovellusta',
+        'pr.eyebrow':'Prosessi // miten työskentelemme','pr.title':'Neljä vaihetta, noin kolme viikkoa.','pr.1':'Kartoitus','pr.1p':'Maksuton aloituspuhelu yrityksestäsi, käyttäjistäsi ja siitä, miltä onnistuminen näyttää.','pr.2':'Määrittely','pr.2p':'Lyhyt tarjous, jossa laajuus, aikataulu ja kiinteä hinta. Tutkimus ja strategia ennen visuaalisuutta.','pr.3':'Suunnittelu','pr.3p':'Ensin konseptit, sitten yksi suunta, jota hiotaan yhdessä. UI/UX-töissä klikattavat prototyypit.','pr.4':'Toimitus','pr.4p':'Lopulliset tiedostot, ohjeistot ja luovutus – tai julkaisu RUSKA NORDIC Labsin tiimin kanssa.','pr.one':'Yksi yhteyshenkilö seuraa projektiasi alusta loppuun.',
+        'faq.title':'Kysymyksiä','faq.q1':'Kuinka kauan projekti kestää?','faq.a1':'Useimmat projektit kestävät noin kolme viikkoa hyväksytystä tarjouksesta lopullisiin tiedostoihin.','faq.q2':'Teettekö töitä Suomen ulkopuolelle?','faq.a2':'Kyllä. Työskentelemme etänä asiakkaiden kanssa Euroopassa ja Itä-Aasiassa.','faq.q3':'Voitteko myös rakentaa sovelluksen?','faq.a3':'Kyllä, yhdessä sovelluskehitystiimimme RUSKA NORDIC Labsin kanssa.','faq.q4':'Millä kielillä voimme asioida?','faq.a4':'Englanniksi, suomeksi ja kiinaksi.',
+        'ab.eyebrow':'Meistä // Kangasala','ab.title':'Pieni studio Suomessa, työtä yli kulttuurien.','ab.lead':'INNO Design Studio on brändi- ja UI/UX-suunnittelustudio Kangasalla. Olemme tarkoituksella pieni tiimi: jokaisen projektin suunnittelevat ne ihmiset, joiden kanssa puhut.',
+        'ab.r1':'Perustaja ja pääsuunnittelija','ab.r2':'Toinen perustaja ja toimitusjohtaja','ab.now':'Nyt',
+        'ab.t1':'Perustettiin suunnittelu- ja viestintäyritykseksi, joka tuotti ja lokalisoi sisältöä kansainvälisille asiakkaille Kiinan markkinoille.','ab.t2':'Aloimme edustaa pohjoismaista designia Itä-Aasiassa ja tuoda eurooppalaisia lifestyle-tuotteita uusille asiakkaille.','ab.t3':'Perustimme RUSKA NORDICin, brändimme mobiilisovelluksille ja hienon posliinin kaupalle.','ab.t4':'Keskitymme brändi- ja UI/UX-suunnitteluun, ja omat sovelluksemme ovat työpajamme sille, mitä suunnittelemme asiakkaille.',
+        'v.1':'Selkeys ennen nokkeluutta','v.1p':'Jos käyttäjän täytyy miettiä, suunnittelu ei ole valmis.','v.2':'Tehty käytettäväksi','v.2p':'Ohjeistoja ja näkymiä, joiden kanssa tiimisi voi työskennellä.','v.3':'Kunnioitus jokaista kulttuuria kohtaan','v.3p':'Suunnittelemme niille, jotka sen lukevat.','ab.ruska':'Toinen brändimme: RUSKA NORDIC – sovellukset ja hieno posliini ↗',
+        'ct.title':'Onko sinulla projekti mielessä?','ct.lead':'Kerro, mitä olet rakentamassa. Vastaamme kahden arkipäivän kuluessa.','ct.copied':'[KOPIOITU]','ct.s':'01 // Palvelut','ct.c':'02 // Yhteystiedot','ct.priv':'Tietosuoja',
+        'd.close':'Sulje [Esc]','d.client':'Asiakas','d.year':'Vuosi','d.svc':'Palvelut','d.status':'Tila','d.ch':'Haaste','d.did':'Mitä teimme','d.res':'Tulos','d.similar':'Aloita samanlainen projekti ↗','d.next':'Seuraava projekti →',
+        'q.eyebrow':'Vastaus kahden arkipäivän kuluessa','q.title':'Kerro projektistasi','q.name':'01 // Nimi *','q.email':'02 // Sähköposti *','q.co':'03 // Yritys','q.need':'04 // Mitä tarvitset?','q.unsure':'En ole vielä varma','q.msg':'05 // Viesti *','q.err':'Täytä nimi, toimiva sähköpostiosoite ja viesti.','q.send':'Kirjoita sähköposti ↗','q.done':'Melkein valmista','q.doneP':'Sähköpostisovelluksesi avautuu viestisi kanssa. Jos se ei avaudu, lähetä viesti osoitteeseen info@innostudio.net – vastaamme kahden arkipäivän kuluessa.',
+        'p.body':'Tämä sivusto ei käytä evästeitä eikä seurantaa. Jos lähetät meille sähköpostia, käytämme nimeäsi, sähköpostiosoitettasi ja viestiäsi vain projektiasi koskevaan vastaukseen ja poistamme ne, kun niitä ei enää tarvita. Rekisterinpitäjä: INNO Design Studio, Y-tunnus 2765454-9, Katajatie 16, 36200 Kangasala. Kysymykset: info@innostudio.net.'
+      }
+    };
+
+    const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+    const EN = {}; $$('[data-i18n]').forEach(el => { const k = el.dataset.i18n; if (!(k in EN)) EN[k] = el.innerHTML; });
+    let lang = 'en', drawerIdx = 0;
+    const tx = o => (o && (o[lang] || o.en)) || '';
+
+
+    /* ---------- plates for the work cards ---------- */
+    const PLATE = {
+      inno:`<svg viewBox="0 0 800 500" class="w-full h-full" aria-hidden="true"><rect width="800" height="500" fill="#E5E5E5"/><text x="60" y="230" font-family="Switzer, Arial, sans-serif" font-weight="500" font-size="190" letter-spacing="0" fill="#111">20</text><text x="540" y="230" font-family="Switzer, Arial, sans-serif" font-weight="500" font-size="190" letter-spacing="0" fill="#111">15</text><rect x="60" y="270" width="190" height="14" fill="#111"/><text x="40" y="45" font-family="monospace" font-size="13" font-weight="bold" fill="#111">INNO DESIGN STUDIO // REBRAND</text></svg>`
+    };
+
+
+    /* ---------- real images from the RUSKA NORDIC site ---------- */
+    const DIR = { wico:'wico', duel:'time-duel', fermo:'fermo', fly:'flydrop' };
+    const SITE = {
+      ruska: [['img/ruska-home.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
+      innopub: [['img/innopublishing/shot-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
+                ['img/innopublishing/shot-2.webp', 'Innopublishing new titles section with a book cover'],
+                ['img/innopublishing/shot-3.webp', 'Innopublishing publishing services: four ways to work together']]
+    };
+    function plate(w, big) {
+      const d = DIR[w.key];
+      let slides;
+      if (d) slides = [1,2,3,4,5,6].map(k => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center"><img src="img/${d}/screen-${k}.webp" alt="${w.code} — screen ${k} of 6" loading="lazy" draggable="false" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`);
+      else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[14%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto border border-ink [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`);
+      else slides = [`<div class="slide flex-none w-full h-full">${PLATE[w.key]}</div>`];
+      const many = slides.length > 1;
+      return `<div class="carousel relative w-full h-full">
+        <div class="track w-full h-full flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth" tabindex="0" aria-label="${w.code} screenshots">${slides.join('')}</div>
+        ${d ? `<img src="img/${d}/icon.png" alt="" class="absolute left-4 top-4 w-9 h-9 pointer-events-none">` : ''}
+        ${many ? `<button class="c-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-poster/90 border border-ink/40 font-sans text-lg hover:bg-ink hover:text-poster cursor-pointer" aria-label="Previous screenshot">←</button>
+          <button class="c-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-poster/90 border border-ink/40 font-sans text-lg hover:bg-ink hover:text-poster cursor-pointer" aria-label="Next screenshot">→</button>` : ''}
+      </div>`;
+    }
+    function wireCarousels(root) {
+      root.querySelectorAll('.carousel').forEach(c => {
+        const t = c.querySelector('.track'), n = t.children.length, cnt = c.querySelector('.c-count');
+        const at = () => Math.round(t.scrollLeft / Math.max(1, t.clientWidth));
+        const go = k => t.scrollTo({ left: ((k + n) % n) * t.clientWidth });
+        c.querySelector('.c-prev')?.addEventListener('click', e => { e.stopPropagation(); go(at() - 1); });
+        c.querySelector('.c-next')?.addEventListener('click', e => { e.stopPropagation(); go(at() + 1); });
+        t.addEventListener('scroll', () => { if (cnt) cnt.textContent = `${at() + 1} / ${n}`; }, { passive: true });
+        t.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); go(at() + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(at() - 1); } });
+      });
+    }
+
+    /* ---------- render ---------- */
+    function applyLang(l) {
+      lang = l; document.documentElement.lang = l;
+      $$('[data-i18n]').forEach(el => { const k = el.dataset.i18n; el.innerHTML = (l !== 'en' && T[l][k]) || EN[k]; });
+      $$('.lang-btn').forEach(b => { const on = b.dataset.lang === l; b.className = 'lang-btn px-2.5 min-h-[34px] cursor-pointer ' + (on ? 'bg-[#F4F4F1] text-ink font-bold' : 'text-white/70 hover:bg-white/10'); b.setAttribute('aria-pressed', on); });
+      try { localStorage.setItem('inno-lang', l); } catch (e) {}
+      renderWork();
+    }
+    const LABEL = W.map(w => `WORK-${w.type.toUpperCase()} / ${w.disc}`);
+    const d0 = w => !!DIR[w.key];
+    function cover(w) {
+      const d = DIR[w.key];
+      if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
+      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<div class="w-full h-full flex items-center justify-center px-[10%]"><img src="${src}" alt="${alt}" loading="lazy" class="w-full h-auto border border-ink/15 [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`; }
+      return PLATE[w.key];
+    }
+    function renderWork() {
+      const g = $('#work-grid');
+      g.innerHTML = W.map((w, i) => `
+        <article class="group flex flex-col border border-ink">
+          <button class="w-full flex-1 flex flex-col text-left cursor-pointer" data-case="${i}" aria-label="${w.code} — ${lang === 'fi' ? 'lue tapaus' : 'read the case'}">
+            <span class="w-full px-4 py-3 border-b border-ink flex items-baseline justify-between gap-3">
+              <span class="min-w-0 flex items-baseline gap-2.5">
+                <span class="font-bold text-xl sm:text-2xl uppercase whitespace-nowrap">${w.code}</span>
+                <span class="text-[12px] text-ink truncate">${tx(w.sub)}</span></span>
+              <span class="font-sans text-[9px] tracking-[0.08em] uppercase tabular-nums shrink-0">${w.year}</span></span>
+            <span class="relative block w-full aspect-square overflow-hidden">
+              ${d0(w) ? `<img src="img/${DIR[w.key]}/icon.png" alt="" class="absolute left-4 top-4 w-9 h-9 z-10">` : ''}
+              ${cover(w)}</span>
+            <span class="w-full flex-1 px-4 py-2.5 flex items-center justify-between gap-4 bg-ink text-[#F4F4F1]">
+              <span class="min-w-0 font-sans text-[11px] tracking-[0.08em] uppercase font-medium truncate">${LABEL[i]}</span>
+              <span class="font-sans text-[9px] tracking-[0.08em] uppercase whitespace-nowrap shrink-0 px-2 py-1 text-[#F4F4F1]/80 group-hover:bg-vermilion group-hover:text-ink group-focus-visible:bg-vermilion group-focus-visible:text-ink transition-colors">${lang === 'fi' ? 'Lue tapaus ↗' : 'Read the case ↗'}</span>
+            </span>
+          </button></article>`).join('');
+      $$('[data-case]').forEach(b => b.addEventListener('click', () => openDrawer(+b.dataset.case)));
+    }
+
+    /* ---------- drawer ---------- */
+    const LINK = { play:{en:'Get it on Google Play ↗',fi:'Lataa Google Playsta ↗'}, app:{en:'App page ↗',fi:'Sovelluksen sivu ↗'}, web:{en:'Visit the website ↗',fi:'Avaa verkkosivusto ↗'} };
+
+    const drawer = $('#drawer'), panel = $('#drawer-panel');
+    function fillDrawer(i) {
+      drawerIdx = i; const w = W[i];
+      $('#d-badge').textContent = `${LABEL[i]} · ${w.year}`; $('#d-title').textContent = w.code; $('#d-sub').textContent = tx(w.sub);
+      $('#d-client').textContent = w.client; $('#d-year').textContent = w.year; $('#d-svc').textContent = w.svcs; $('#d-status').textContent = tx(w.status);
+      $('#d-plate').innerHTML = plate(w, true); wireCarousels($('#d-plate'));
+      $('#d-links').innerHTML = (w.links || []).map(([t, url], k) => `<a href="${url}" target="_blank" rel="noopener" class="inline-flex items-center min-h-[50px] px-6 font-sans text-sm uppercase font-semibold ${k === 0 ? 'bg-ink text-poster hover:bg-vermilion hover:text-ink' : 'border border-ink hover:bg-ink hover:text-poster'} transition-colors">${tx(LINK[t])}</a>`).join(''); $('#d-ch').textContent = tx(w.ch); $('#d-did').textContent = tx(w.did); $('#d-res').textContent = tx(w.res);
+      panel.scrollTop = 0;
+    }
+    function openDrawer(i) { fillDrawer(i); drawer.classList.replace('hidden', 'flex'); document.body.style.overflow = 'hidden'; requestAnimationFrame(() => panel.classList.remove('translate-x-full')); $('#d-close').focus(); }
+    function closeDrawer() { if (drawer.classList.contains('hidden')) return; panel.classList.add('translate-x-full'); setTimeout(() => { drawer.classList.replace('flex', 'hidden'); document.body.style.overflow = ''; }, 450); }
+
+    /* ---------- modals ---------- */
+    const inquiry = $('#inquiry'), privacy = $('#privacy');
+    function openModal(m) { m.classList.replace('hidden', 'flex'); document.body.style.overflow = 'hidden'; }
+    function closeModal(m) { if (m.classList.contains('hidden')) return; m.classList.replace('flex', 'hidden'); document.body.style.overflow = '';
+      if (m === inquiry) { $('#q-form').classList.remove('hidden'); $('#q-done').classList.add('hidden'); $('#q-err').classList.add('hidden'); } }
+
+    /* ---------- events ---------- */
+    $$('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+    $('#d-close').addEventListener('click', closeDrawer);
+    $('#d-next').addEventListener('click', () => fillDrawer((drawerIdx + 1) % W.length));
+    $('#d-inquire').addEventListener('click', () => { closeDrawer(); openModal(inquiry); });
+    drawer.addEventListener('click', e => { if (e.target === drawer) closeDrawer(); });
+    $$('.open-inquiry').forEach(b => b.addEventListener('click', () => openModal(inquiry)));
+    $('#q-close').addEventListener('click', () => closeModal(inquiry));
+    inquiry.addEventListener('click', e => { if (e.target === inquiry) closeModal(inquiry); });
+    $('#open-privacy').addEventListener('click', () => openModal(privacy));
+    $('#p-close').addEventListener('click', () => closeModal(privacy));
+    privacy.addEventListener('click', e => { if (e.target === privacy) closeModal(privacy); });
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDrawer(); closeModal(inquiry); closeModal(privacy); } });
+
+    $('#q-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = $('#q-name').value.trim(), email = $('#q-email').value.trim(), msg = $('#q-msg').value.trim();
+      if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !msg) { $('#q-err').classList.remove('hidden'); return; }
+      const subject = `New project: ${$('#q-need').value} — ${name}`;
+      const body = `${msg}\n\n${name}\n${email}\n${$('#q-co').value.trim()}`;
+      const href = `mailto:info@innostudio.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      $('#q-mailto').href = href; $('#q-form').classList.add('hidden'); $('#q-done').classList.remove('hidden');
+      try { window.location.href = href; } catch (err) {}
+    });
+
+    $('#copy-email').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText('info@innostudio.net'); $('#copy-toast').classList.remove('hidden'); setTimeout(() => $('#copy-toast').classList.add('hidden'), 2400); } catch (err) {}
+    });
+    let grid = true;
+    $('#grid-btn').addEventListener('click', () => { grid = !grid; $('#app-body').classList.toggle('grid-on', grid); $('#grid-btn').textContent = grid ? '[GRID: ON]' : '[GRID: OFF]'; });
+
+    /* ---------- start ---------- */
+    let start = 'en';
+    try { start = localStorage.getItem('inno-lang') || ''; } catch (e) {}
+    if (!start) { const nl = (navigator.language || 'en').toLowerCase(); start = nl.startsWith('fi') ? 'fi' : 'en'; }
+    if (!['en', 'fi'].includes(start)) start = 'en';
+    applyLang(start);
+  }
+  
+  /* HERO: line the small text up with the big numerals' real glyph edges (works for any font) */
+  (function(){
+    const cv=document.createElement('canvas').getContext('2d');
+    const baseY=(el,atEnd)=>{const m=document.createElement('span');m.style.cssText='display:inline-block;width:0;height:0;vertical-align:baseline';
+      atEnd?el.appendChild(m):el.insertBefore(m,el.firstChild);const y=m.getBoundingClientRect().top;m.remove();return y;};
+    const ascent=el=>{cv.font=getComputedStyle(el).font;return cv.measureText(el.textContent.trim()).actualBoundingBoxAscent;};
+    function align(){
+      document.querySelectorAll('.text-poster-num').forEach(num=>{
+        const col=num.parentElement.querySelector(':scope > .flex-col'); if(!col) return;
+        const sub=col.querySelector('.text-poster-sub'), foot=col.querySelector('.hero-foot');
+        col.style.paddingTop='0px'; col.style.paddingBottom='0px';
+        const nb=baseY(num), nTop=nb-ascent(num), capH=ascent(num);
+        const colR=col.getBoundingClientRect();
+        // top line: its tallest letter sits a little below the numeral's top
+        const sTop=baseY(sub)-ascent(sub);
+        col.style.paddingTop=Math.max(0,(nTop+capH*0.1)-sTop)+'px';
+        // bottom block: its last baseline sits on the numeral's baseline
+        const last=foot.lastElementChild||foot, d=foot.getBoundingClientRect().bottom-baseY(last,true);
+        col.style.paddingBottom=Math.max(0,colR.bottom-nb-d)+'px';
+      });
+    }
+    (document.fonts?document.fonts.ready:Promise.resolve()).then(align);
+    window.addEventListener('load',align); window.addEventListener('resize',align);
+    // styles and fonts can arrive late: re-align whenever the numerals change size
+    let raf=0; const again=()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(align);};
+    if(window.ResizeObserver){const ro=new ResizeObserver(again);document.querySelectorAll('.text-poster-num,.text-poster-sub').forEach(e=>ro.observe(e));}
+    setTimeout(align,600); setTimeout(align,2000);
+  })();
+
+  /* ARROWS: wrap every arrow character in a span drawn as a thin line arrow */
+  (function(){
+    const MAP={'\u2197':'arr-ne','\u2192':'arr-e','\u2190':'arr-w'}, RE=/[\u2197\u2192\u2190]/;
+    function arrowize(root){
+      if(!root) return;
+      const tw=document.createTreeWalker(root.nodeType===3?root.parentNode:root,NodeFilter.SHOW_TEXT,null), list=[];
+      while(tw.nextNode()){const n=tw.currentNode; if(RE.test(n.data)&&!(n.parentNode.classList&&n.parentNode.classList.contains('arr'))&&!n.parentNode.closest('script,style,svg')) list.push(n);}
+      list.forEach(n=>{const f=document.createDocumentFragment();
+        n.data.split(/([\u2197\u2192\u2190])/).forEach(part=>{ if(!part) return;
+          if(MAP[part]){const sp=document.createElement('span');sp.className='arr '+MAP[part];sp.setAttribute('aria-hidden','true');sp.textContent=part;f.appendChild(sp);}
+          else f.appendChild(document.createTextNode(part)); });
+        n.parentNode.replaceChild(f,n);});
+    }
+    arrowize(document.body);
+    new MutationObserver(ms=>ms.forEach(m=>{ if(m.type==='characterData') arrowize(m.target); else m.addedNodes.forEach(arrowize); }))
+      .observe(document.body,{childList:true,subtree:true,characterData:true});
+  })();
+</script>
+</body>
+</html>
