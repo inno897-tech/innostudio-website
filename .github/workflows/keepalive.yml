@@ -1,0 +1,10 @@
+name: Keep Brevo key alive
+on:
+  schedule:
+    - cron: "37 6 1 * *"   # 06:37 UTC on the 1st of every month
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS https://innostudio.net/api/keepalive
