@@ -275,8 +275,7 @@
           <h2 class="font-semibold text-3xl sm:text-5xl tracking-normal leading-[0.95]" data-i18n="ct.title">Have a project in mind?</h2>
           <p class="text-sm sm:text-[15px] text-[#E5E5E5]/75 max-w-xl leading-relaxed" data-i18n="ct.lead">Tell us what you are building. We reply within two working days.</p>
           <div class="pt-2 flex flex-wrap items-center gap-3">
-            <button id="copy-email" class="px-6 min-h-[50px] border border-[#E5E5E5]/30 font-sans text-sm uppercase font-semibold hover:border-[#E5E5E5] transition-colors cursor-pointer">info@innostudio.net</button>
-            <span id="copy-toast" class="hidden font-sans text-sm text-vermilion uppercase" data-i18n="ct.copied">[COPIED]</span>
+            <button id="copy-email" class="open-inquiry px-6 min-h-[50px] border border-[#E5E5E5]/30 font-sans text-sm uppercase font-semibold hover:border-[#E5E5E5] transition-colors cursor-pointer">info@innostudio.net</button>
           </div>
         </div>
         <div class="lg:col-span-5 grid grid-cols-2 gap-8 font-sans text-nano uppercase">
@@ -601,11 +600,6 @@
         $('#q-form').classList.add('hidden'); $('#q-done').classList.remove('hidden'); $('#q-form').reset();
       } catch (err) { $('#q-fail').classList.remove('hidden'); }
       btn.disabled = false; btn.style.opacity = '';
-    });
-
-    $('#copy-email').addEventListener('click', async () => {
-      window.location.href = 'mailto:info@innostudio.net';
-      try { await navigator.clipboard.writeText('info@innostudio.net'); $('#copy-toast').classList.remove('hidden'); setTimeout(() => $('#copy-toast').classList.add('hidden'), 2400); } catch (err) {}
     });
     let grid = true;
     $('#grid-btn').addEventListener('click', () => { grid = !grid; $('#app-body').classList.toggle('grid-on', grid); $('#grid-btn').textContent = grid ? '[GRID: ON]' : '[GRID: OFF]'; });
