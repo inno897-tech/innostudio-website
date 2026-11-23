@@ -348,22 +348,24 @@
         <button id="q-close" class="font-sans text-nano uppercase px-2.5 min-h-[34px] border border-ink hover:bg-ink hover:text-poster cursor-pointer">ESC</button>
       </div>
       <form id="q-form" class="space-y-5" novalidate>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Website <input id="q-web" type="text" tabindex="-1" autocomplete="off"></label></div>
         <div><label for="q-name" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.name">01 // Name *</label><input id="q-name" type="text" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
         <div><label for="q-email" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.email">02 // Email *</label><input id="q-email" type="email" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
         <div><label for="q-co" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.co">03 // Company</label><input id="q-co" type="text" class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion" /></div>
         <div><label for="q-need" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.need">04 // What do you need?</label>
           <select id="q-need" class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion">
-            <option data-i18n="hero.m1">Brand design</option><option data-i18n="hero.m2">UI/UX design</option><option data-i18n="svc.s3">Localization</option><option data-i18n="q.unsure">Not sure yet</option>
+            <option value="brand" data-i18n="hero.m1">Brand design</option><option value="uiux" data-i18n="hero.m2">UI/UX design</option><option value="loc" data-i18n="svc.s3">Localization</option><option value="unsure" data-i18n="q.unsure">Not sure yet</option>
           </select></div>
         <div><label for="q-msg" class="block font-sans text-nano uppercase text-ink mb-1.5" data-i18n="q.msg">05 // Message *</label><textarea id="q-msg" rows="3" required class="w-full bg-transparent border-b border-ink py-2 text-base focus:outline-none focus:border-vermilion resize-none"></textarea></div>
         <p id="q-err" class="hidden font-sans text-nano uppercase bg-vermilion text-ink px-1.5 py-1" data-i18n="q.err">Please fill in name, a valid email and a message.</p>
-        <button type="submit" class="w-full min-h-[48px] bg-ink text-poster hover:bg-vermilion hover:text-ink font-sans text-nano uppercase font-semibold transition-colors cursor-pointer" data-i18n="q.send">Write the email ↗</button>
+        <p id="q-fail" class="hidden font-sans text-nano uppercase bg-vermilion text-ink px-1.5 py-1" data-i18n="q.fail">Sending failed. Please email us directly: info@innostudio.net</p>
+        <button type="submit" class="w-full min-h-[48px] bg-ink text-poster hover:bg-vermilion hover:text-ink font-sans text-nano uppercase font-semibold transition-colors cursor-pointer" data-i18n="q.send">Send ↗</button>
       </form>
       <div id="q-done" class="hidden py-6 space-y-4">
         <div class="w-12 h-[8px] bg-vermilion"></div>
-        <h4 class="font-semibold text-2xl" data-i18n="q.done">Almost there</h4>
-        <p class="text-sm leading-relaxed" data-i18n="q.doneP">Your email app should open with your message. If it does not, send it to info@innostudio.net — we reply within two working days.</p>
-        <a id="q-mailto" href="mailto:info@innostudio.net" class="inline-flex items-center min-h-[44px] font-sans text-nano uppercase underline font-semibold">info@innostudio.net ↗</a>
+        <h4 class="font-semibold text-2xl" data-i18n="q.done">Thank you</h4>
+        <p class="text-sm leading-relaxed" data-i18n="q.doneP">Your message has been sent. We reply within two working days.</p>
+        
       </div>
     </div>
   </div>
@@ -458,7 +460,7 @@
         'v.1':'Selkeys ennen nokkeluutta','v.1p':'Jos käyttäjän täytyy miettiä, suunnittelu ei ole valmis.','v.2':'Tehty käytettäväksi','v.2p':'Ohjeistoja ja näkymiä, joiden kanssa tiimisi voi työskennellä.','v.3':'Kunnioitus jokaista kulttuuria kohtaan','v.3p':'Suunnittelemme niille, jotka sen lukevat.','ab.ruska':'Toinen brändimme: RUSKA NORDIC – sovellukset ja hieno posliini ↗',
         'ct.title':'Onko sinulla projekti mielessä?','ct.lead':'Kerro, mitä olet rakentamassa. Vastaamme kahden arkipäivän kuluessa.','ct.copied':'[KOPIOITU]','ct.s':'01 // Palvelut','ct.c':'02 // Yhteystiedot','ct.priv':'Tietosuoja',
         'd.close':'Sulje [Esc]','d.client':'Asiakas','d.year':'Vuosi','d.svc':'Palvelut','d.status':'Tila','d.ch':'Haaste','d.did':'Mitä teimme','d.res':'Tulos','d.similar':'Aloita samanlainen projekti ↗','d.next':'Seuraava projekti →',
-        'q.eyebrow':'Vastaus kahden arkipäivän kuluessa','q.title':'Kerro projektistasi','q.name':'01 // Nimi *','q.email':'02 // Sähköposti *','q.co':'03 // Yritys','q.need':'04 // Mitä tarvitset?','q.unsure':'En ole vielä varma','q.msg':'05 // Viesti *','q.err':'Täytä nimi, toimiva sähköpostiosoite ja viesti.','q.send':'Kirjoita sähköposti ↗','q.done':'Melkein valmista','q.doneP':'Sähköpostisovelluksesi avautuu viestisi kanssa. Jos se ei avaudu, lähetä viesti osoitteeseen info@innostudio.net – vastaamme kahden arkipäivän kuluessa.',
+        'q.eyebrow':'Vastaus kahden arkipäivän kuluessa','q.title':'Kerro projektistasi','q.name':'01 // Nimi *','q.email':'02 // Sähköposti *','q.co':'03 // Yritys','q.need':'04 // Mitä tarvitset?','q.unsure':'En ole vielä varma','q.msg':'05 // Viesti *','q.err':'Täytä nimi, toimiva sähköpostiosoite ja viesti.','q.send':'Lähetä ↗','q.done':'Kiitos','q.doneP':'Viestisi on lähetetty. Vastaamme kahden arkipäivän kuluessa.','q.fail':'Lähetys ei onnistunut. Kirjoita meille suoraan: info@innostudio.net',
         'p.body':'Tämä sivusto ei käytä evästeitä eikä seurantaa. Jos lähetät meille sähköpostia, käytämme nimeäsi, sähköpostiosoitettasi ja viestiäsi vain projektiasi koskevaan vastaukseen ja poistamme ne, kun niitä ei enää tarvita. Rekisterinpitäjä: INNO Design Studio, Y-tunnus 2765454-9, Katajatie 16, 36200 Kangasala. Kysymykset: info@innostudio.net.'
       }
     };
@@ -563,7 +565,10 @@
 
     /* ---------- modals ---------- */
     const inquiry = $('#inquiry'), privacy = $('#privacy');
-    function openModal(m) { m.classList.replace('hidden', 'flex'); document.body.style.overflow = 'hidden'; }
+    let qOpened = Date.now();
+    function openModal(m) {
+      if (m.id === 'inquiry') { qOpened = Date.now(); $('#q-form').classList.remove('hidden'); $('#q-done').classList.add('hidden'); $('#q-fail').classList.add('hidden'); }
+      m.classList.replace('hidden', 'flex'); document.body.style.overflow = 'hidden'; }
     function closeModal(m) { if (m.classList.contains('hidden')) return; m.classList.replace('flex', 'hidden'); document.body.style.overflow = '';
       if (m === inquiry) { $('#q-form').classList.remove('hidden'); $('#q-done').classList.add('hidden'); $('#q-err').classList.add('hidden'); } }
 
@@ -581,18 +586,25 @@
     privacy.addEventListener('click', e => { if (e.target === privacy) closeModal(privacy); });
     window.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDrawer(); closeModal(inquiry); closeModal(privacy); } });
 
-    $('#q-form').addEventListener('submit', e => {
+    $('#q-form').addEventListener('submit', async e => {
       e.preventDefault();
+      const btn = e.submitter || $('#q-form button[type="submit"]');
       const name = $('#q-name').value.trim(), email = $('#q-email').value.trim(), msg = $('#q-msg').value.trim();
+      $('#q-err').classList.add('hidden'); $('#q-fail').classList.add('hidden');
       if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !msg) { $('#q-err').classList.remove('hidden'); return; }
-      const subject = `New project: ${$('#q-need').value} — ${name}`;
-      const body = `${msg}\n\n${name}\n${email}\n${$('#q-co').value.trim()}`;
-      const href = `mailto:info@innostudio.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      $('#q-mailto').href = href; $('#q-form').classList.add('hidden'); $('#q-done').classList.remove('hidden');
-      try { window.location.href = href; } catch (err) {}
+      btn.disabled = true; btn.style.opacity = '.5';
+      try {
+        const r = await fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ name, email, company: $('#q-co').value.trim(), need: $('#q-need').value, message: msg,
+            website: $('#q-web').value, elapsed: Date.now() - qOpened, lang }) });
+        if (!r.ok) throw new Error(r.status);
+        $('#q-form').classList.add('hidden'); $('#q-done').classList.remove('hidden'); $('#q-form').reset();
+      } catch (err) { $('#q-fail').classList.remove('hidden'); }
+      btn.disabled = false; btn.style.opacity = '';
     });
 
     $('#copy-email').addEventListener('click', async () => {
+      window.location.href = 'mailto:info@innostudio.net';
       try { await navigator.clipboard.writeText('info@innostudio.net'); $('#copy-toast').classList.remove('hidden'); setTimeout(() => $('#copy-toast').classList.add('hidden'), 2400); } catch (err) {}
     });
     let grid = true;
