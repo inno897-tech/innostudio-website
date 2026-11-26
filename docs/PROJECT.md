@@ -104,7 +104,9 @@
 | FlyDrop | WORK-APP / CONCEPT + UI/UX | App 页（开发中） |
 | RUSKA NORDIC | WORK-WEB / UI/UX | ruskanordic.com |
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
-| INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26 案例文字改为英文 + 芬兰语双语） |
+| INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26：案例文字改为英文 + 芬兰语双语；封面换成上线网站真实截图 img/inno-home.webp） |
+
+   - 11-26：三个网站作品（RUSKA NORDIC、Innopublishing、INNO 改版）的截图都放进一体机台式电脑屏幕里（CSS 画的通用一体机：黑边框 + 银色下巴 + 支架，没有苹果标志），首页卡片和详情页都是
 
    - App 截图和图标来自仓库 `inno897-tech/ruska-nordic-website` 的 `public/images/apps/`
    - RUSKA NORDIC、Innopublishing 截图为网站实拍（已裁掉滚动条）
@@ -122,7 +124,7 @@
 - [ ] 芬兰语文案请母语者校对
 - [x] 在 Cloudflare 设置 info@innostudio.net 转发（11-23 完成）
 - [ ] 可选：Gmail 设置以 info@innostudio.net 发信（Send mail as）
-- [ ] INNO 改版案例：网站上线后换成真实截图
+- [x] INNO 改版案例：已换成真实截图（11-26）
 - [ ] Innopublishing：Stripe 在线销售上线后改案例文字
 - [x] 正式上线（11-23 完成）
 - [ ] 可选：Tailwind CDN 换成编译后的 CSS（加载更快）

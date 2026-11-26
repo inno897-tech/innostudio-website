@@ -191,7 +191,7 @@
             <h2 class="font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-normal mt-2" data-i18n="work.title">Designed, built and used.</h2>
           </div>
         </div>
-        <p class="text-sm text-ink max-w-md leading-relaxed md:text-right" data-i18n="work.lead">Four apps we designed and run ourselves at RUSKA NORDIC Labs, and three brand and website projects. Click a project to read the case.</p>
+        <p class="text-sm text-ink max-w-md leading-relaxed md:text-right" data-i18n="work.lead">Our own typeface, four apps we designed and run at RUSKA NORDIC Labs, and three brand and website projects. Click a project to read the case.</p>
       </div>
       <div id="work-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 pt-14"></div>
     </div>
@@ -456,7 +456,7 @@
         'svc.s3':'Lokalisointi','svc.s3p':'Olemme tuottaneet ja lokalisoineet sisältöä kansainvälisille asiakkaille vuodesta 2015. Sovitamme nimet, tekstit ja käyttöliittymät niin, että ne tuntuvat alkuperäisiltä – eivät käännetyiltä.',
         'svc.s3l':'<li>— Verkkosivujen ja käyttöliittymien lokalisointi</li><li>— Brändi- ja markkinointitekstien sovitus</li><li>— Kiina, suomi, ruotsi, japani ja muut</li><li>— Nimien, värien ja kuvien markkinasopivuuden tarkistus</li>',
         'pk.title':'Paketit','pk.note':'Kiinteä tarjous lyhyen aloituspuhelun jälkeen','pk.p1':'Logo, värit, kirjasimet ja lyhyt ohjeisto.','pk.p2':'Brändistrategia, täysi visuaalinen järjestelmä ja ohjeisto.','pk.p3':'Yhden sivun verkkosivusto suunniteltuna ja julkaistuna. Laajemmat sivustot sivumäärän mukaan.','pk.p4':'UX-tutkimus, prototyypit ja koko käyttöliittymä.','pk.w':'noin 3 viikkoa','pk.cta':'Ota yhteyttä ↗','pk.from':'Kaikki hinnat ovat alkaen-hintoja.',
-        'work.eyebrow':'Valitut työt // oikeita projekteja','work.title':'Suunniteltu, rakennettu ja käytössä.','work.lead':'Neljä sovellusta, jotka olemme suunnitelleet ja joita ylläpidämme itse RUSKA NORDIC Labsissa, sekä kolme brändi- ja verkkosivuprojektia. Avaa projekti lukeaksesi tapauksen.',
+        'work.eyebrow':'Valitut työt // oikeita projekteja','work.title':'Suunniteltu, rakennettu ja käytössä.','work.lead':'Oma kirjaintyyppimme, neljä sovellusta, jotka olemme suunnitelleet ja joita ylläpidämme RUSKA NORDIC Labsissa, sekä kolme brändi- ja verkkosivuprojektia. Avaa projekti lukeaksesi tapauksen.',
         'why.1':'Tarkoituksella pieni','why.1p':'Työskentelet suoraan projektiasi suunnittelevien ihmisten kanssa. Ei välikäsiä.','why.2':'Brändi ja tuote, yksi tiimi','why.2p':'Ilme ja käyttöliittymä suunnitellaan yhdessä, joten ne näyttävät ja tuntuvat samalta yritykseltä.','why.3':'Ymmärretty kulttuurien yli','why.3p':'Olemme työskennelleet Euroopan ja Itä-Aasian välillä vuodesta 2015 englanniksi, suomeksi ja kiinaksi.',
         'num.1':'suunnitellut vuodesta','num.2':'työkieltä','num.3':'omaa sovellusta',
         'pr.eyebrow':'Prosessi // miten työskentelemme','pr.title':'Neljä vaihetta, noin kolme viikkoa.','pr.1':'Kartoitus','pr.1p':'Maksuton aloituspuhelu yrityksestäsi, käyttäjistäsi ja siitä, miltä onnistuminen näyttää.','pr.2':'Määrittely','pr.2p':'Lyhyt tarjous, jossa laajuus, aikataulu ja kiinteä hinta. Tutkimus ja strategia ennen visuaalisuutta.','pr.3':'Suunnittelu','pr.3p':'Ensin konseptit, sitten yksi suunta, jota hiotaan yhdessä. UI/UX-töissä klikattavat prototyypit.','pr.4':'Toimitus','pr.4p':'Lopulliset tiedostot, ohjeistot ja luovutus – tai julkaisu RUSKA NORDIC Labsin tiimin kanssa.','pr.one':'Yksi yhteyshenkilö seuraa projektiasi alusta loppuun.',
@@ -489,17 +489,27 @@
     const ROUTA = ['cover','hero','nordic','anatomy','figures','strips-a','strips-b','departures','weather','smarthome','ev','cluster','watch','jacket','rovamasq']
       .map((n, k) => [`img/routa/${n}.webp`, `Routa typeface specimen ${k + 1} of 15`]);
     const SITE = {
+      inno: [['img/inno-home.webp', 'INNO Design Studio homepage: 20 / 15, nordic design studio']],
       ruska: [['img/ruska-home.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
       innopub: [['img/innopublishing/shot-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
                 ['img/innopublishing/shot-2.webp', 'Innopublishing new titles section with a book cover'],
                 ['img/innopublishing/shot-3.webp', 'Innopublishing publishing services: four ways to work together']]
     };
+    /* all-in-one desktop screen for website screenshots */
+    function monitor(src, alt, lazy = true) {
+      return `<div class="w-full [filter:drop-shadow(0_16px_20px_rgba(0,0,0,.20))]">
+        <div class="rounded-t-[10px] bg-[#161616] p-[1.8%]"><img src="${src}" alt="${alt}" ${lazy ? 'loading="lazy"' : ''} draggable="false" class="block w-full aspect-[16/10] object-cover object-top"></div>
+        <div class="rounded-b-[10px] bg-gradient-to-b from-[#e9e9eb] to-[#cfd0d3] aspect-[16/1.25]"></div>
+        <div class="mx-auto w-[17%] aspect-[17/13] bg-gradient-to-r from-[#bfc0c3] via-[#e4e4e6] to-[#bfc0c3] [clip-path:polygon(8%_0,92%_0,100%_100%,0_100%)]"></div>
+        <div class="mx-auto w-[27%] h-[5px] rounded-full bg-gradient-to-r from-[#c4c5c8] via-[#e7e7e9] to-[#c4c5c8]"></div>
+      </div>`;
+    }
     function plate(w, big) {
       const d = DIR[w.key];
       let slides;
       if (d) slides = [1,2,3,4,5,6].map(k => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center"><img src="img/${d}/screen-${k}.webp" alt="${w.code} — screen ${k} of 6" loading="lazy" draggable="false" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`);
       else if (w.key === 'routa') slides = ROUTA.map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[6%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto"></div>`);
-      else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[14%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto border border-ink [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`);
+      else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[20%]">${monitor(src, alt)}</div>`);
       else slides = [`<div class="slide flex-none w-full h-full">${PLATE[w.key]}</div>`];
       const many = slides.length > 1;
       return `<div class="carousel relative w-full h-full">
@@ -535,7 +545,7 @@
       const d = DIR[w.key];
       if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
       if (w.key === 'routa') return `<div class="w-full h-full flex items-center justify-center bg-[#B1EB38]"><img src="${ROUTA[0][0]}" alt="Routa typeface cover" loading="lazy" class="w-full h-auto"></div>`;
-      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<div class="w-full h-full flex items-center justify-center px-[10%]"><img src="${src}" alt="${alt}" loading="lazy" class="w-full h-auto border border-ink/15 [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`; }
+      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<div class="w-full h-full flex items-center justify-center px-[9%]">${monitor(src, alt)}</div>`; }
       return PLATE[w.key];
     }
     function renderWork() {
