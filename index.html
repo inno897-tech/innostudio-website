@@ -489,30 +489,15 @@
     const ROUTA = ['cover','hero','nordic','anatomy','figures','strips-a','strips-b','departures','weather','smarthome','ev','cluster','watch','jacket','rovamasq']
       .map((n, k) => [`img/routa/${n}.webp`, `Routa typeface specimen ${k + 1} of 15`]);
     const SITE = {
-      inno: [['img/inno-home.webp', 'INNO Design Studio homepage: 20 / 15, nordic design studio']],
-      ruska: [['img/ruska-home.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
-      innopub: [['img/innopublishing/shot-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
-                ['img/innopublishing/shot-2.webp', 'Innopublishing new titles section with a book cover'],
-                ['img/innopublishing/shot-3.webp', 'Innopublishing publishing services: four ways to work together']]
+      inno: [['img/mac/inno.webp', 'INNO Design Studio homepage: 20 / 15, nordic design studio']],
+      ruska: [['img/mac/ruska.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
+      innopub: [['img/mac/innopub-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
+                ['img/mac/innopub-2.webp', 'Innopublishing new titles section with a book cover'],
+                ['img/mac/innopub-3.webp', 'Innopublishing publishing services: four ways to work together']]
     };
-    /* studio scene: grey wall, black-bezel display on a flat aluminium stand, black desk */
+    /* website work shown on a MacBook Air (ls.graphics mockup, licensed); images are pre-rendered in img/mac/ */
     function monitor(src, alt, wide = false) {
-      return `<div class="relative w-full h-full flex flex-col items-center overflow-hidden bg-gradient-to-b from-[#4f4f4f] via-[#8a8a8a] to-[#c4c4c4]">
-        <div class="flex-1"></div>
-        <div class="relative ${wide ? 'w-[52%]' : 'w-[66%]'} rounded-[6px] bg-black p-[1.7%] shadow-[0_18px_40px_rgba(0,0,0,.35)]">
-          <span class="absolute left-1/2 top-[0.6%] -translate-x-1/2 w-[0.6%] aspect-square rounded-full bg-[#1f2531]"></span>
-          <img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="block w-full aspect-[16/9] object-cover object-top">
-        </div>
-        <div class="${wide ? 'w-[12.6%]' : 'w-[16%]'} h-[15%] bg-gradient-to-r from-[#6f6f71] via-[#d3d4d6] to-[#7d7e80]"></div>
-        <div class="${wide ? 'w-[13.1%]' : 'w-[16.6%]'} h-[1.2%] rounded-t-[2px] bg-gradient-to-r from-[#bdbec0] via-[#f1f1f2] to-[#bdbec0]"></div>
-        <div class="relative w-full h-[4.5%] bg-gradient-to-b from-[#3a3a3a] via-[#151515] to-[#0a0a0a]"></div>
-        <div class="relative w-full h-[13%]">
-          <span class="absolute left-[11%] w-[2.8%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#3a3a3a] to-[#0c0c0c]"></span>
-          <span class="absolute left-[15.6%] w-[2.4%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#2e2e2e] to-[#0c0c0c]"></span>
-          <span class="absolute right-[15.6%] w-[2.4%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#2e2e2e] to-[#0c0c0c]"></span>
-          <span class="absolute right-[11%] w-[2.8%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#3a3a3a] to-[#0c0c0c]"></span>
-        </div>
-      </div>`;
+      return `<div class="w-full h-full flex items-center justify-center bg-[#F9F9F9]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
     }
     function plate(w, big) {
       const d = DIR[w.key];
