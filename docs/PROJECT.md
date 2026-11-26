@@ -106,7 +106,7 @@
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
 | INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26：案例文字改为英文 + 芬兰语双语；封面换成上线网站真实截图 img/inno-home.webp） |
 
-   - 11-26：三个网站作品（RUSKA NORDIC、Innopublishing、INNO 改版）的截图都放进一体机台式电脑屏幕里（CSS 画的通用一体机：黑边框 + 银色下巴 + 支架，没有苹果标志），首页卡片和详情页都是
+   - 11-26：三个网站作品（RUSKA NORDIC、Innopublishing、INNO 改版）的截图都放进一体机台式电脑屏幕里（CSS 画，按用户给的 iMac 27" 样机图：宽黑边框 + 顶部摄像头 + 右侧斜向反光 + 银色下巴 + 铝合金支架；不放苹果标志），首页卡片和详情页都是
 
    - App 截图和图标来自仓库 `inno897-tech/ruska-nordic-website` 的 `public/images/apps/`
    - RUSKA NORDIC、Innopublishing 截图为网站实拍（已裁掉滚动条）
