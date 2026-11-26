@@ -497,7 +497,7 @@
     };
     /* website work shown on a MacBook Air (ls.graphics mockup, licensed); images are pre-rendered in img/mac/ */
     function monitor(src, alt, wide = false) {
-      return `<div class="w-full h-full flex items-center justify-center bg-[#F9F9F9]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
+      return `<div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#1a1a1d] to-[#09090a]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
     }
     function plate(w, big) {
       const d = DIR[w.key];
@@ -540,7 +540,7 @@
       const d = DIR[w.key];
       if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
       if (w.key === 'routa') return `<div class="w-full h-full flex items-center justify-center bg-[#B1EB38]"><img src="${ROUTA[0][0]}" alt="Routa typeface cover" loading="lazy" class="w-full h-auto"></div>`;
-      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return monitor(src, alt); }
+      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<img src="${src.replace('.webp', '-sq.webp')}" alt="${alt}" loading="lazy" class="block w-full h-full object-cover">`; }
       return PLATE[w.key];
     }
     function renderWork() {
