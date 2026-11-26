@@ -1,6 +1,6 @@
 # INNO DESIGN STUDIO 网站改版 — 项目进度
 
-更新时间：2026-11-23
+更新时间：2026-11-26
 
 ## 已上线（2026-11-23）
 
@@ -89,7 +89,7 @@
    - 照片下方四组信息：BRAND DESIGN / UI/UX DESIGN（右对齐）/ LANGUAGES / REPLY（右对齐）
    - 中间设备画面已去掉
 3. **服务**：标题 "Brand, interface, language."；三张黑底白字卡片（Brand design / UI & UX design / Localization）；套餐四项（标题已去掉"Packages"字样，名称加大，Contact us 变小并底部对齐）
-4. **作品**（7 个，每排 3 个）：标题 "Designed, built and used."
+4. **作品**（8 个，每排 3 个；11-26 新增 Routa 放在第一个）：标题 "Designed, built and used."
    - 卡片（11-23 调换）：黑色细线外框；**第一行：作品名称（大写 Bold 700，24px）+ 简介，右边 2026**；正方形展示区；**底部黑条：WORK-APP / CONCEPT + UI/UX 标签（Medium 500，11px）+ Read the case ↗**
    - 首页卡片只显示一张截图；点击后在详情页才出现左右翻页；名称不变色，Read the case 鼠标移上去出现黄色底块
    - 详情页：左右箭头在画面中间，无页码；网页截图四周留白
@@ -97,13 +97,14 @@
 
 | 作品 | 标签 | 链接 |
 |---|---|---|
+| Routa | WORK-TYPE / TYPE DESIGN | 暂无（MyFonts 审核通过后加购买链接）；15 张 MyFonts 展示图在 img/routa/，封面为 cover.webp |
 | Wico | WORK-APP / CONCEPT + UI/UX | Google Play（fi.wico.app）· App 页 |
 | Time Duel | WORK-APP / CONCEPT + UI/UX | Google Play（net.innostudio.timeduel）· App 页 |
 | FERMO | WORK-APP / CONCEPT + UI/UX | App 页（开发中） |
 | FlyDrop | WORK-APP / CONCEPT + UI/UX | App 页（开发中） |
 | RUSKA NORDIC | WORK-WEB / UI/UX | ruskanordic.com |
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
-| INNO 改版 | WORK-BRAND / BRANDING | innostudio.net |
+| INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26 案例文字改为英文 + 芬兰语双语） |
 
    - App 截图和图标来自仓库 `inno897-tech/ruska-nordic-website` 的 `public/images/apps/`
    - RUSKA NORDIC、Innopublishing 截图为网站实拍（已裁掉滚动条）
@@ -128,7 +129,8 @@
 - [ ] Wix：确认域名续费方式后，取消 Wix 网站套餐
 - [x] 旧 Google 邮箱：确认没有扣费，MX/SPF 记录已删除
 - [ ] 可选：只含 INNO 的简版 logo，用作浏览器图标
-- [ ] 可选：作品第三排只有 1 个，可删 INNO 改版或再加 2 个作品
+- [x] 新增作品 Routa（11-26），现在 8 个作品
+- [ ] Routa：MyFonts 上线后加购买按钮，状态改为已上线
 
 ## 下一步要做
 

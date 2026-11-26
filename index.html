@@ -381,6 +381,14 @@
   {
     /* ---------- content: the six real projects ---------- */
     const W = [
+      { key:'routa', links:[], disc:'TYPE DESIGN', type:'type', code:'ROUTA', year:'2026', svcs:'TYPE DESIGN · 3 WEIGHTS', client:'INNO DESIGN STUDIO',
+        status:{en:'Coming to MyFonts',fi:'Tulossa MyFontsiin'},
+        sub:{en:'A geometric UI display typeface',fi:'Geometrinen UI-näyttökirjaintyyppi'},
+        ch:{en:'Interface headlines, dashboards and data displays need a display face that stays clear at a glance and handles Nordic letters as naturally as plain Latin.',
+            fi:'Käyttöliittymien otsikot, kojelaudat ja datanäkymät tarvitsevat näyttökirjaintyypin, joka on selkeä yhdellä silmäyksellä ja käsittelee pohjoismaiset kirjaimet yhtä luontevasti kuin tavalliset latinalaiset.'},
+        did:{en:'We started from a single letter and grew it into a full family: 186 glyphs including Å Ä Ö Æ Ø, monoline geometric forms with rounded corners, tabular figures, and three weights — Light, Regular and Bold.',
+             fi:'Aloitimme yhdestä kirjaimesta ja kasvatimme sen kokonaiseksi perheeksi: 186 merkkiä, mukana Å Ä Ö Æ Ø, tasavahvat geometriset muodot pyöristetyin kulmin, tasalevyiset numerot ja kolme painoa – Light, Regular ja Bold.'},
+        res:{en:'Routa is designed and built in our studio and has been submitted to MyFonts.',fi:'Routa on suunniteltu ja rakennettu studiossamme, ja se on lähetetty MyFontsiin.'} },
       { key:'wico', links:[['play','https://play.google.com/store/apps/details?id=fi.wico.app'],['app','https://ruskanordic.com/labs/wico/']], disc:'CONCEPT + UI/UX', type:'app', code:'WICO', year:'2026', svcs:'UX · UI', client:'RUSKA NORDIC Labs',
         status:{en:'Live',fi:'Julkaistu'},
         sub:{en:'School messages, sorted',fi:'Koulun viestit selkeiksi'},
@@ -427,7 +435,7 @@
         status:{en:'You are looking at it',fi:'Katselet sitä nyt'},
         sub:{en:'Our own rebrand',fi:'Oma brändiuudistuksemme'},
         ch:{en:'After ten years our site still described the company we were in 2015, not the brand and UI/UX studio we are today.',fi:'Kymmenen vuoden jälkeen sivustomme kuvasi yhä vuoden 2015 yritystä, ei nykyistä brändi- ja UI/UX-studiota.'},
-        did:{en:'A new logo, a Swiss-Nordic poster system and a three-language website in English, Chinese and Finnish.',fi:'Uusi logo, sveitsiläis-pohjoismainen julistejärjestelmä ja kolmikielinen sivusto englanniksi, kiinaksi ja suomeksi.'},
+        did:{en:'A new logo, a Swiss-Nordic poster system and a bilingual website in English and Finnish.',fi:'Uusi logo, sveitsiläis-pohjoismainen julistejärjestelmä ja kaksikielinen sivusto englanniksi ja suomeksi.'},
         res:{en:'This website.',fi:'Tämä sivusto.'} }
     ];
 
@@ -478,6 +486,8 @@
 
     /* ---------- real images from the RUSKA NORDIC site ---------- */
     const DIR = { wico:'wico', duel:'time-duel', fermo:'fermo', fly:'flydrop' };
+    const ROUTA = ['cover','hero','nordic','anatomy','figures','strips-a','strips-b','departures','weather','smarthome','ev','cluster','watch','jacket','rovamasq']
+      .map((n, k) => [`img/routa/${n}.webp`, `Routa typeface specimen ${k + 1} of 15`]);
     const SITE = {
       ruska: [['img/ruska-home.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
       innopub: [['img/innopublishing/shot-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
@@ -488,6 +498,7 @@
       const d = DIR[w.key];
       let slides;
       if (d) slides = [1,2,3,4,5,6].map(k => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center"><img src="img/${d}/screen-${k}.webp" alt="${w.code} — screen ${k} of 6" loading="lazy" draggable="false" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`);
+      else if (w.key === 'routa') slides = ROUTA.map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[6%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto"></div>`);
       else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[14%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto border border-ink [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`);
       else slides = [`<div class="slide flex-none w-full h-full">${PLATE[w.key]}</div>`];
       const many = slides.length > 1;
@@ -523,6 +534,7 @@
     function cover(w) {
       const d = DIR[w.key];
       if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
+      if (w.key === 'routa') return `<div class="w-full h-full flex items-center justify-center bg-[#B1EB38]"><img src="${ROUTA[0][0]}" alt="Routa typeface cover" loading="lazy" class="w-full h-auto"></div>`;
       if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<div class="w-full h-full flex items-center justify-center px-[10%]"><img src="${src}" alt="${alt}" loading="lazy" class="w-full h-auto border border-ink/15 [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.18))]"></div>`; }
       return PLATE[w.key];
     }
