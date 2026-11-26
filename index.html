@@ -495,17 +495,23 @@
                 ['img/innopublishing/shot-2.webp', 'Innopublishing new titles section with a book cover'],
                 ['img/innopublishing/shot-3.webp', 'Innopublishing publishing services: four ways to work together']]
     };
-    /* all-in-one desktop screen for website screenshots */
-    function monitor(src, alt, lazy = true) {
-      return `<div class="w-full [filter:drop-shadow(0_18px_22px_rgba(0,0,0,.22))]">
-        <div class="relative overflow-hidden rounded-t-[12px] bg-black px-[4%] pt-[4%] pb-[4.2%]">
-          <span class="absolute left-1/2 top-[1.6%] -translate-x-1/2 w-[0.7%] aspect-square rounded-full bg-[#1d2330] ring-1 ring-[#2c3444]"></span>
-          <img src="${src}" alt="${alt}" ${lazy ? 'loading="lazy"' : ''} draggable="false" class="relative block w-full aspect-[16/9] object-cover object-top outline outline-1 outline-[#2a2a2a]">
-          <span class="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.16] to-white/[0.03] [clip-path:polygon(80%_0,100%_0,100%_100%,55%_100%)]"></span>
+    /* studio scene: grey wall, black-bezel display on a flat aluminium stand, black desk */
+    function monitor(src, alt, wide = false) {
+      return `<div class="relative w-full h-full flex flex-col items-center overflow-hidden bg-gradient-to-b from-[#4f4f4f] via-[#8a8a8a] to-[#c4c4c4]">
+        <div class="flex-1"></div>
+        <div class="relative ${wide ? 'w-[52%]' : 'w-[66%]'} rounded-[6px] bg-black p-[1.7%] shadow-[0_18px_40px_rgba(0,0,0,.35)]">
+          <span class="absolute left-1/2 top-[0.6%] -translate-x-1/2 w-[0.6%] aspect-square rounded-full bg-[#1f2531]"></span>
+          <img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="block w-full aspect-[16/9] object-cover object-top">
         </div>
-        <div class="rounded-b-[12px] aspect-[1655/150] bg-gradient-to-r from-[#aeb1b8] via-[#c9cbd0] to-[#dcdde1]"></div>
-        <div class="mx-auto w-[29%] aspect-[480/165] bg-gradient-to-b from-[#9fa2a9] via-[#d2d4d8] to-[#8e9198] [clip-path:polygon(17%_0,83%_0,85%_55%,100%_96%,100%_100%,0_100%,0_96%,15%_55%)]"></div>
-        <div class="mx-auto w-[29%] h-[4px] rounded-b-full bg-gradient-to-r from-[#c3c5ca] via-[#eceef0] to-[#c3c5ca]"></div>
+        <div class="${wide ? 'w-[12.6%]' : 'w-[16%]'} h-[15%] bg-gradient-to-r from-[#6f6f71] via-[#d3d4d6] to-[#7d7e80]"></div>
+        <div class="${wide ? 'w-[13.1%]' : 'w-[16.6%]'} h-[1.2%] rounded-t-[2px] bg-gradient-to-r from-[#bdbec0] via-[#f1f1f2] to-[#bdbec0]"></div>
+        <div class="relative w-full h-[4.5%] bg-gradient-to-b from-[#3a3a3a] via-[#151515] to-[#0a0a0a]"></div>
+        <div class="relative w-full h-[13%]">
+          <span class="absolute left-[11%] w-[2.8%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#3a3a3a] to-[#0c0c0c]"></span>
+          <span class="absolute left-[15.6%] w-[2.4%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#2e2e2e] to-[#0c0c0c]"></span>
+          <span class="absolute right-[15.6%] w-[2.4%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#2e2e2e] to-[#0c0c0c]"></span>
+          <span class="absolute right-[11%] w-[2.8%] h-full bg-gradient-to-r from-[#0c0c0c] via-[#3a3a3a] to-[#0c0c0c]"></span>
+        </div>
       </div>`;
     }
     function plate(w, big) {
@@ -513,7 +519,7 @@
       let slides;
       if (d) slides = [1,2,3,4,5,6].map(k => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center"><img src="img/${d}/screen-${k}.webp" alt="${w.code} — screen ${k} of 6" loading="lazy" draggable="false" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`);
       else if (w.key === 'routa') slides = ROUTA.map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[6%]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-auto"></div>`);
-      else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center flex items-center justify-center px-[20%]">${monitor(src, alt)}</div>`);
+      else if (SITE[w.key]) slides = SITE[w.key].map(([src, alt]) => `<div class="slide flex-none w-full h-full snap-center">${monitor(src, alt, true)}</div>`);
       else slides = [`<div class="slide flex-none w-full h-full">${PLATE[w.key]}</div>`];
       const many = slides.length > 1;
       return `<div class="carousel relative w-full h-full">
@@ -549,7 +555,7 @@
       const d = DIR[w.key];
       if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
       if (w.key === 'routa') return `<div class="w-full h-full flex items-center justify-center bg-[#B1EB38]"><img src="${ROUTA[0][0]}" alt="Routa typeface cover" loading="lazy" class="w-full h-auto"></div>`;
-      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<div class="w-full h-full flex items-center justify-center px-[9%]">${monitor(src, alt)}</div>`; }
+      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return monitor(src, alt); }
       return PLATE[w.key];
     }
     function renderWork() {
