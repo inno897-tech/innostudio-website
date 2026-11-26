@@ -488,16 +488,14 @@
     const DIR = { wico:'wico', duel:'time-duel', fermo:'fermo', fly:'flydrop' };
     const ROUTA = ['cover','hero','nordic','anatomy','figures','strips-a','strips-b','departures','weather','smarthome','ev','cluster','watch','jacket','rovamasq']
       .map((n, k) => [`img/routa/${n}.webp`, `Routa typeface specimen ${k + 1} of 15`]);
-    const SITE = {
-      inno: [['img/mac/inno.webp', 'INNO Design Studio homepage: 20 / 15, nordic design studio']],
-      ruska: [['img/mac/ruska.webp', 'RUSKA NORDIC homepage: Nordic roots. Global reach.']],
-      innopub: [['img/mac/innopub-1.webp', 'Innopublishing homepage: Dedicated to Academic & Scholarly Publishing'],
-                ['img/mac/innopub-2.webp', 'Innopublishing new titles section with a book cover'],
-                ['img/mac/innopub-3.webp', 'Innopublishing publishing services: four ways to work together']]
-    };
+    const SITE = Object.fromEntries([
+      ['ruska', 'RUSKA NORDIC', ['Homepage', 'Design Labs', 'Global Trade', 'Wico app page', 'Contact']],
+      ['innopub', 'Innopublishing', ['Homepage', 'New titles', 'All books', 'Book page', 'Publishing services']],
+      ['inno', 'INNO Design Studio', ['Homepage', 'Services', 'Selected work', 'Process', 'Contact']]
+    ].map(([k, name, pages]) => [k, pages.map((pg, n) => [`img/mac/${k}-${n + 1}.webp`, `${name} — ${pg}, shown on a laptop`])]));
     /* website work shown on a MacBook Air (ls.graphics mockup, licensed); images are pre-rendered in img/mac/ */
     function monitor(src, alt, wide = false) {
-      return `<div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#1a1a1d] to-[#09090a]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
+      return `<div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#bebebf] via-[#68696d] to-[#343439]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
     }
     function plate(w, big) {
       const d = DIR[w.key];
@@ -540,7 +538,7 @@
       const d = DIR[w.key];
       if (d) return `<div class="w-full h-full flex items-center justify-center"><img src="img/${d}/screen-1.webp" alt="${w.code} — app screen" loading="lazy" class="h-[92%] w-auto [filter:drop-shadow(0_14px_18px_rgba(0,0,0,.22))]"></div>`;
       if (w.key === 'routa') return `<div class="w-full h-full flex items-center justify-center bg-[#B1EB38]"><img src="${ROUTA[0][0]}" alt="Routa typeface cover" loading="lazy" class="w-full h-auto"></div>`;
-      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<img src="${src.replace('.webp', '-sq.webp')}" alt="${alt}" loading="lazy" class="block w-full h-full object-cover">`; }
+      if (SITE[w.key]) { const [src, alt] = SITE[w.key][0]; return `<img src="${src.replace(/-\d+\.webp$/, '-sq.webp')}" alt="${alt}" loading="lazy" class="block w-full h-full object-cover">`; }
       return PLATE[w.key];
     }
     function renderWork() {

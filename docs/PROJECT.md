@@ -106,7 +106,12 @@
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
 | INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26：案例文字改为英文 + 芬兰语双语；封面换成上线网站真实截图 img/inno-home.webp） |
 
-   - 11-26：三个网站作品（RUSKA NORDIC、Innopublishing、INNO 改版）改用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）：截图放进屏幕（保留刘海和圆角），电脑放在桌面上，深色背景 + 柔光和斜向光束 + 桌面接触阴影和倒影。详情页图 1600×1024（img/mac/*.webp），首页卡片用方形版（img/mac/*-sq.webp）。合成脚本 /home/claude/mockup/render.py（PSD 不进仓库）；网站截图更新时需重新合成
+   - 11-26：三个网站作品用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）合成：灰色渐变背景（左上浅灰 #BEBEBF → 底部深灰 #343439，按用户给的参考色）、电脑放在平面上（接触阴影 + 淡倒影）。**每个网站 5 页**，详情页可左右翻：
+     - RUSKA NORDIC：首页 / Design Labs / Global Trade / Wico 页 / Contact
+     - Innopublishing：首页 / 新书 / 全部书目 / 单本书页 / 出版服务
+     - INNO：首页 / 服务 / 作品 / 流程 / 联系
+     - 文件：img/mac/{ruska,innopub,inno}-1~5.webp（1600×1024），首页卡片用 -sq.webp 方形版
+     - 合成脚本 /home/claude/mockup/render2.py（PSD 不进仓库）；网站更新后需重新截图合成
 
    - App 截图和图标来自仓库 `inno897-tech/ruska-nordic-website` 的 `public/images/apps/`
    - RUSKA NORDIC、Innopublishing 截图为网站实拍（已裁掉滚动条）
