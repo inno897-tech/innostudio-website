@@ -131,9 +131,9 @@
 - [x] 在 Cloudflare 设置 info@innostudio.net 转发（11-23 完成）
 - [x] Gmail 以 info@innostudio.net 发信（11-27 确认可用）
 - [x] INNO 改版案例：已换成真实截图（11-26）
-- [ ] Innopublishing：Stripe 在线销售上线后改案例文字
+- [x] Innopublishing 案例文字已更新（11-27）：Stripe 在线 PDF 销售已上线，服务改为 WEB · E-COMMERCE
 - [x] 正式上线（11-23 完成）
-- [ ] 可选：Tailwind CDN 换成编译后的 CSS（加载更快）
+- [x] Tailwind CDN 换成编译后的 CSS（11-27）：css/site.css（约 21KB），配置在 tools/tailwind.config.js，改了 index.html 里的样式类后要按 tools/README.md 重新编译，并把 site.css?v= 的数字加 1。注意：Claude 预览 artifact 不再同步，以线上网站为准
 - [ ] Wix：确认域名续费方式后，取消 Wix 网站套餐
 - [x] 旧 Google 邮箱：确认没有扣费，MX/SPF 记录已删除
 - [x] 浏览器标签图标（11-27，用户提供的黑底白色 N 字标：favicon.ico + img/favicon-32.png + img/apple-touch-icon.png）

@@ -10,28 +10,7 @@
   <meta name="description" content="A small brand and UI/UX design studio in Kangasala, Finland. Identities, websites and apps for companies in Europe and East Asia." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        borderRadius: { none: '0px', DEFAULT: '0px', sm: '0px', md: '0px', lg: '0px', full: '9999px' },
-        extend: {
-          colors: { poster: '#E5E5E5', ink: '#111111', vermilion: '#FFD400', alloyLight: '#DCDCDC', oled: '#161616', muted: '#595959' },
-          fontFamily: {
-            sans: ['"Switzer"', 'Arial', 'sans-serif'],
-            mono: ['"Switzer"', 'Arial', 'sans-serif'],
-          },
-          fontSize: {
-            'micro': ['0.6875rem', { lineHeight: '1.35', letterSpacing: '0.04em' }],
-            'nano': ['0.625rem', { lineHeight: '1.3', letterSpacing: '0.08em' }],
-            'poster-num': ['clamp(5rem, 11.5vw, 10.5rem)', { lineHeight: '0.82', letterSpacing: '0' }],
-            'poster-sub': ['clamp(0.9rem, 1.35vw, 1.25rem)', { lineHeight: '1.1', letterSpacing: '0' }],
-          },
-          transitionTimingFunction: { 'swiss': 'cubic-bezier(0.16, 1, 0.3, 1)' }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/css/site.css?v=1">
   <style>
     /* VOICE: calm, plain, confident — a small Finnish studio talking to clients
        IDEA: a Swiss exhibition poster for the studio
@@ -426,14 +405,14 @@
         ch:{en:'Two very different businesses — mobile apps and porcelain trade — needed to sit under one calm, credible brand.',fi:'Kaksi hyvin erilaista liiketoimintaa – mobiilisovellukset ja posliinikauppa – piti tuoda yhden rauhallisen ja uskottavan brändin alle.'},
         did:{en:'We set up the brand structure, designed an editorial, magazine-style website with equal weight for Labs and Trade, and launched it on low-cost hosting.',fi:'Rakensimme brändirakenteen, suunnittelimme aikakauslehtimäisen verkkosivuston, jossa Labs ja Trade ovat yhtä painavia, ja julkaisimme sen edulliselle alustalle.'},
         res:{en:'The site is live at ruskanordic.com.',fi:'Sivusto on julkaistu osoitteessa ruskanordic.com.'} },
-      { key:'innopub', links:[['web','https://www.innopublishing.com/']], disc:'UI/UX', type:'web', code:'INNOPUBLISHING', year:'2026', svcs:'BRAND · WEB', client:'INNO MEDIA & PUBLISHING',
+      { key:'innopub', links:[['web','https://www.innopublishing.com/']], disc:'UI/UX', type:'web', code:'INNOPUBLISHING', year:'2026', svcs:'WEB · E-COMMERCE', client:'INNO MEDIA & PUBLISHING',
         status:{en:'Live · innopublishing.com',fi:'Julkaistu · innopublishing.com'},
         sub:{en:'Academic & scholarly publishing, in English and Chinese',fi:'Akateemista julkaisutoimintaa englanniksi ja kiinaksi'},
         ch:{en:'A scholarly press had outgrown its template website. It needed an independent, bilingual site where readers can browse the catalogue and authors can find publishing services.',
             fi:'Tieteellinen kustantamo oli kasvanut ulos valmispohjaisesta sivustostaan. Se tarvitsi itsenäisen, kaksikielisen sivuston, jossa lukijat selaavat julkaisuja ja kirjoittajat löytävät kustannuspalvelut.'},
-        did:{en:'We designed a calm, cultured site: a green reading-room hero, Gloock and Gowun Batang type, English and Traditional Chinese side by side, a catalogue by series and four publishing services — then moved it off Wix to its own hosting and domain email.',
-             fi:'Suunnittelimme rauhallisen ja sivistyneen sivuston: vihreä lukusalikuva, Gloock- ja Gowun Batang -kirjasimet, englanti ja perinteinen kiina rinnakkain, sarjoittain järjestetty luettelo ja neljä kustannuspalvelua – ja siirsimme sen Wixistä omalle alustalle ja omaan sähköpostiin.'},
-        res:{en:'The site is live at innopublishing.com. Online PDF sales are being added.',fi:'Sivusto on julkaistu osoitteessa innopublishing.com. PDF-verkkomyyntiä ollaan lisäämässä.'} },
+        did:{en:'We designed a calm, cultured site: a green reading-room hero, Gloock and Gowun Batang type, English and Traditional Chinese side by side, a catalogue by series and four publishing services. We moved it off Wix to its own hosting and domain email, and built a shop where readers buy each book as a PDF with Stripe and download it right away.',
+             fi:'Suunnittelimme rauhallisen ja sivistyneen sivuston: vihreä lukusalikuva, Gloock- ja Gowun Batang -kirjasimet, englanti ja perinteinen kiina rinnakkain, sarjoittain järjestetty luettelo ja neljä kustannuspalvelua – Siirsimme sen Wixistä omalle alustalle ja omaan sähköpostiin ja rakensimme kaupan, jossa lukijat ostavat kirjat PDF-muodossa Stripen kautta ja lataavat ne heti.'},
+        res:{en:'The site is live at innopublishing.com, and the books are on sale online as PDFs.',fi:'Sivusto on julkaistu osoitteessa innopublishing.com, ja kirjoja myydään verkossa PDF-muodossa.'} },
       { key:'inno', links:[['web','https://www.innostudio.net/']], disc:'BRANDING', type:'brand', code:'INNO DESIGN STUDIO', year:'2026', svcs:'BRAND · WEB', client:'INNO DESIGN STUDIO',
         status:{en:'You are looking at it',fi:'Katselet sitä nyt'},
         sub:{en:'Our own rebrand',fi:'Oma brändiuudistuksemme'},
