@@ -106,7 +106,7 @@
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
 | INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26：案例文字改为英文 + 芬兰语双语；封面换成上线网站真实截图 img/inno-home.webp） |
 
-   - 11-26：三个网站作品用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）合成：灰色渐变背景（左上浅灰 #BEBEBF → 底部深灰 #343439，按用户给的参考色）、电脑放在平面上（接触阴影 + 淡倒影）。**每个网站 5 页**，详情页可左右翻：
+   - 11-26：三个网站作品用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）合成：浅灰渐变背景（11-27 调浅：#E2E2E3 → #B0B1B4 → #7C7D82），详情页图片铺满不留边、电脑放在平面上（接触阴影 + 淡倒影）。**每个网站 5 页**，详情页可左右翻：
      - RUSKA NORDIC：首页 / Design Labs / Global Trade / Wico 页 / Contact
      - Innopublishing：首页 / 新书 / 全部书目 / 单本书页 / 出版服务
      - INNO：首页 / 服务 / 作品 / 流程 / 联系
@@ -135,7 +135,7 @@
 - [ ] 可选：Tailwind CDN 换成编译后的 CSS（加载更快）
 - [ ] Wix：确认域名续费方式后，取消 Wix 网站套餐
 - [x] 旧 Google 邮箱：确认没有扣费，MX/SPF 记录已删除
-- [ ] 可选：只含 INNO 的简版 logo，用作浏览器图标
+- [x] 浏览器标签图标（11-27，用户提供的黑底白色 N 字标：favicon.ico + img/favicon-32.png + img/apple-touch-icon.png）
 - [x] 新增作品 Routa（11-26），现在 8 个作品
 - [ ] Routa：MyFonts 上线后加购买按钮，状态改为已上线
 

@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INNO Design Studio — Brand & UI/UX Design Studio in Finland</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <meta name="description" content="A small brand and UI/UX design studio in Kangasala, Finland. Identities, websites and apps for companies in Europe and East Asia." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
@@ -495,7 +498,7 @@
     ].map(([k, name, pages]) => [k, pages.map((pg, n) => [`img/mac/${k}-${n + 1}.webp`, `${name} — ${pg}, shown on a laptop`])]));
     /* website work shown on a MacBook Air (ls.graphics mockup, licensed); images are pre-rendered in img/mac/ */
     function monitor(src, alt, wide = false) {
-      return `<div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#bebebf] via-[#68696d] to-[#343439]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="${wide ? 'h-full w-auto' : 'w-full h-auto'}"></div>`;
+      return `<div class="w-full h-full flex items-center justify-center bg-[#b0b1b4]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-full object-cover"></div>`;
     }
     function plate(w, big) {
       const d = DIR[w.key];
