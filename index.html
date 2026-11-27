@@ -498,7 +498,7 @@
     ].map(([k, name, pages]) => [k, pages.map((pg, n) => [`img/mac/${k}-${n + 1}.webp`, `${name} — ${pg}, shown on a laptop`])]));
     /* website work shown on a MacBook Air (ls.graphics mockup, licensed); images are pre-rendered in img/mac/ */
     function monitor(src, alt, wide = false) {
-      return `<div class="w-full h-full flex items-center justify-center bg-[#b0b1b4]"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-full object-cover"></div>`;
+      return `<div class="w-full h-full flex items-center justify-center"><img src="${src}" alt="${alt}" loading="lazy" draggable="false" class="w-full h-full object-contain"></div>`;
     }
     function plate(w, big) {
       const d = DIR[w.key];

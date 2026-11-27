@@ -106,7 +106,7 @@
 | Innopublishing | WORK-WEB / UI/UX | innopublishing.com |
 | INNO 改版 | WORK-BRAND / BRANDING | innostudio.net（11-26：案例文字改为英文 + 芬兰语双语；封面换成上线网站真实截图 img/inno-home.webp） |
 
-   - 11-26：三个网站作品用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）合成：浅灰渐变背景（11-27 调浅：#E2E2E3 → #B0B1B4 → #7C7D82），详情页图片铺满不留边、电脑放在平面上（接触阴影 + 淡倒影）。**每个网站 5 页**，详情页可左右翻：
+   - 11-26：三个网站作品用用户购买的 **ls.graphics MacBook Air 2022 样机**（PSD）合成：透明背景（11-27：和 App 作品一样直接用页面浅灰底 + 网格，只保留电脑和阴影）、电脑放在平面上（接触阴影 + 淡倒影）。**每个网站 5 页**，详情页可左右翻：
      - RUSKA NORDIC：首页 / Design Labs / Global Trade / Wico 页 / Contact
      - Innopublishing：首页 / 新书 / 全部书目 / 单本书页 / 出版服务
      - INNO：首页 / 服务 / 作品 / 流程 / 联系
