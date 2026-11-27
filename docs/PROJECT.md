@@ -1,6 +1,6 @@
 # INNO DESIGN STUDIO 网站改版 — 项目进度
 
-更新时间：2026-11-26
+更新时间：2026-11-27
 
 ## 已上线（2026-11-23）
 
@@ -111,6 +111,7 @@
      - Innopublishing：首页 / 新书 / 全部书目 / 单本书页 / 出版服务
      - INNO：首页 / 服务 / 作品 / 流程 / 联系
      - 文件：img/mac/{ruska,innopub,inno}-1~5.webp（1600×1024），首页卡片用 -sq.webp 方形版
+     - 图片地址带版本号 ?v=3，更新图片时把版本号加 1，避免浏览器显示旧图
      - 合成脚本 /home/claude/mockup/render2.py（PSD 不进仓库）；网站更新后需重新截图合成
 
    - App 截图和图标来自仓库 `inno897-tech/ruska-nordic-website` 的 `public/images/apps/`
