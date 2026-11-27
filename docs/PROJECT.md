@@ -129,7 +129,7 @@
 
 - [ ] 芬兰语文案请母语者校对
 - [x] 在 Cloudflare 设置 info@innostudio.net 转发（11-23 完成）
-- [ ] 可选：Gmail 设置以 info@innostudio.net 发信（Send mail as）
+- [x] Gmail 以 info@innostudio.net 发信（11-27 确认可用）
 - [x] INNO 改版案例：已换成真实截图（11-26）
 - [ ] Innopublishing：Stripe 在线销售上线后改案例文字
 - [x] 正式上线（11-23 完成）
